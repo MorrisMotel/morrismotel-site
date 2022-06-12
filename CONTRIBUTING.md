@@ -5,7 +5,7 @@ The format for the `authors.json` is as follows:
       "name": "Authorname",
       "image": "/src/data/authors/authorname.jpeg",
       "desc": "A brief description of yourself."
-    }
+}
 ```
 Make sure to add a comma after the last author in the file before you add your own, or else it'll produce an error.
 Then, write a post. 
