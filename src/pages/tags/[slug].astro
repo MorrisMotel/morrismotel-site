@@ -1,0 +1,39 @@
+---
+  import BaseLayout from "../../components/layouts/baselayout.astro";
+  import Tags from '../../components/Tags.astro';
+  import Article from '../../components/article.astro';
+  import { getAllPosts } from '../../lib/posts.js';
+
+  export async function getStaticPaths({ rss }) {
+    const posts = await Promise.all(await getAllPosts())
+    const allTags = [...new Set(posts.flatMap(({ tags }) => tags))]
+
+    return allTags.map((tag) => {
+      const postsForTag = posts.filter((post) => post.tags.includes(tag));
+      return {
+        params: { slug: tag },
+        props: { allTags, postsForTag },
+      };
+    });
+  }
+
+  const tag = Astro.params.slug
+  const postsForTag = Astro.props.postsForTag
+---
+
+<BaseLayout title={`Tags - ${tag}`} description={`Tags for ${tag}`} post={false}>
+  <h1 class="mb-4 text-4xl font-extrabold text-center" color="currentColor">
+    All posts tagged with #{tag}
+  </h1>
+
+  <Tags />
+
+  <section class="mb-10 -mx-4">
+    <div class="container md:mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+        {postsForTag.map((p) =>
+        <Article post={p} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

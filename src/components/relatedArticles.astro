@@ -1,0 +1,8 @@
+---
+import Article from "../components/article.astro";
+import { getAllPosts } from "src/lib/posts";
+const post = Astro.props.post;
+const posts = await Promise.all(await getAllPosts())
+const filtered = posts.filter((el) => post.content.tags.some(x => el.tags.includes(x)) && (post.content.title !== el.title))
+---
+{filtered.map((p) => <Article post={p} />)}

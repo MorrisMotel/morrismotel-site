@@ -1,0 +1,75 @@
+@import url("/fonts/stylesheet.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.astro-code {
+  border-radius: var(--rounded-box);
+  padding: 1rem;
+}
+
+@layer utilities {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .logo-text {
+    font-family: "Mabry Pro";
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  .logo-text {
+    letter-spacing: -1px;
+  }
+
+  .menu :where(li)> :where(*:not(ul)) {
+    padding: 0.5rem;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+  }
+
+  .prose :where(h1):not(:where([class~="not-prose"] *)) {
+    margin-bottom: 0.1em !important;
+  }
+
+  @media (min-width: 1024px) {
+    .prose :where(img):not(:where([class~="not-prose"] *)) {
+      max-width: 50% !important;
+    }
+  }
+
+  .prose :where(img):not(:where([class~="not-prose"] *)) {
+    border-radius: 10px;
+  }
+
+  .badge {
+    padding: 0px;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost.btn-active {
+    --tw-bg-opacity: 0.1;
+  }
+
+  .ring {
+    -moz-background-clip: padding !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+  }
+}
+
+.footer-nav .menu-item {
+  margin: 0px 12px;
+}
+
+[class^="rounded"] {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
