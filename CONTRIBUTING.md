@@ -20,7 +20,11 @@ Then, write a post.
 
 How do you write a post, you ask?
 
-Navigate to [this link](https://gitlab.com/morrismotel/morrismotel-site/-/new/main/src%2Fpages%2Fposts) to create a new post file. 
+Navigate to `/src/pages/posts/` **in your fork,** and click the New button to create a new file.  
+If you know your way around an IDE (such as Visual Studio Code), you can use that as well.  
+Name the file `your-post-title.md`, `md` standing for markdown, which is a formatting language.  
+You may not know it as markdown, but it's the same formatting that most everyone uses -- \*\***for bold**\*\*, \**for italics*\*, stuff like that.  
+If you don't know markdown, you can just use the row of buttons found at the top of the editor, which will let you style your post without knowing the code.  
 At the top, insert this text:
 ```yaml
 ---
