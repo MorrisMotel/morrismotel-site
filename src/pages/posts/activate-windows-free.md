@@ -10,7 +10,7 @@ tags:
   - general-piracy
 ---
 
-The price for a new Windows activation license is usually around $140. There's almost always a way to get around that price tag though. There are three working methods to activate Windows. Refer to the chart below to find which method will work best for your system.
+The price for a new Windows activation license is usually around $140. Thankfully though, there's a way around that price tag. There are three working methods to activate Windows. Refer to the chart below to find which method will work best for your system.
 
 | **Activation Type** | **Supported Product** | **Activation Period** |
 |---------------------|:---------------------:|:---------------------:|
