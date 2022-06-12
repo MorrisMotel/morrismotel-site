@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- essential -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- core -->
+	<title>How to Use qBitTorrent</title>
+	<meta name="description" content="Sail the Seven Seas">
+	<!-- twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="How to Use qBitTorrent">
+	<meta name="twitter:description" content="Sail the Seven Seas">
+	<meta name="twitter:image" content="http://localhost:3000/card.png">
+	<meta name="twitter:image:alt" content="How to Use qBitTorrent">
+	
+	
+	<!-- og -->
+	<meta property="og:title" content="How to Use qBitTorrent">
+	<meta property="og:description" content="Sail the Seven Seas">
+	<meta property="og:image" content="http://localhost:3000/card.png">
+	<meta property="og:image:alt" content="How to Use qBitTorrent">
+	<meta property="og:site_name" content="How to Use qBitTorrent">
+	<meta property="og:type" content="object">
+	<meta property="og:url" content="http://localhost:3000/">
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fff">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#000">
+
+	
+<link rel="stylesheet" href="/assets/asset.b34eb033.css"></link><script type="module" src="/entry.5ac9515516.js" astro-script="/posts/qbittorrent-guide/script-0"></script>
+</head>
+
+<body class="flex flex-col items-center h-screen bg-white dark:bg-black text-black dark:text-white">
+	<div class="w-full max-w-6xl flex-grow">
+		<script onerror="alert('error!')" src="/../src/data/theme.js"></script>
+
+
+<nav class="py-2.5 px-4">
+  <div class="flex flex-wrap justify-between items-center">
+    <a href="/" class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1354" height="1037" viewBox="0 0 1354 1037" class="mr-3 w-10 h-10" fill="currentColor">
+        <g id="Group">
+          <path id="Path" fill-rule="evenodd" stroke="none" d="M 1 3 L 1 1036.914917 L 140.149017 1036.914917 L 140.149017 284.976746 L 676.866577 694.514587 L 1352.733154 177.557129 L 1352.733154 3 L 676.866577 519.957458 L 1 3 Z"></path>
+          <path id="Path-copy" fill-rule="evenodd" stroke="none" d="M 1352.733154 352.114136 L 1352.733154 1036.914917 L 1216.897217 1036.914917 L 1216.897217 627.377197 L 676.866577 1036.914917 L 275.984924 731.440125 L 275.984924 560.239868 L 676.866577 869.071594 L 1352.733154 352.114136 Z"></path>
+        </g>
+      </svg>
+      <span class="self-center text-xl font-semibold whitespace-nowrap text-current logo-text">Morris Motel</span>
+    </a>
+    <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+      </svg>
+      <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+        <li>
+          <a class="font-bold block py-2 pr-4 pl-3 text-current hover:text-blue-600 dark:hover:text-blue-500 md:p-0 transition-colors duration-200" href="/about">About</a>
+        </li><li>
+          <a class="font-bold block py-2 pr-4 pl-3 text-current hover:text-blue-600 dark:hover:text-blue-500 md:p-0 transition-colors duration-200" href="https://www.buymeacoffee.com/morrismotel">Donate</a>
+        </li><li>
+          <a class="font-bold block py-2 pr-4 pl-3 text-current hover:text-blue-600 dark:hover:text-blue-500 md:p-0 transition-colors duration-200" href="https://blocksurvey.io/survey/17rnK91GV7TCesi9Afx4mXsnFcJNmdXFoa/f100e39b-4a94-4b98-ab29-f70e47d7f4be/r/l">DMCA</a>
+        </li>
+        <!-- <button id="theme-toggle" type="button"
+          class="hover:text-blue-600 dark:hover:text-blue-500 md:p-0 transition-colors duration-200 rounded-lg text-sm p-4">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button> -->
+      </ul>
+    </div>
+
+  </div>
+</nav>
+		<div class="p-4 pb-10">
+			<div class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/qbittorrent-guide/thumb.png')">
+    <div class="items-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-center">How to Use qBitTorrent</h1>
+      <p class="text-lg text-center">
+        <a class="hover:text-blue-500 transition-colors duration-200" href="/author/EgoDeer">
+          Written by EgoDeer
+        </a>on February 21, 2022
+      </p>
+      <!-- <ul>
+        {post.content.tags.map((tag) =>
+        <li><a href={`/tags/${tag}`}
+            class='hover:text-blue-500 transition-colors duration-200 mx-2 text-sm font-medium'>#{tag}</a>
+        </li>)}
+      </ul> -->
+    </div>
+  </div><section class="flex flex-col mb-6 md:mb-10">
+    <div class="container">
+      <article class="prose dark:prose-invert !max-w-full mb-10">
+        <h2 id="table-of-contents">Table of Contents:</h2><ul>
+<li><a href="#why-use-qbittorrent"><strong>Why use qBittorrent?</strong></a></li>
+<li><a href="#installation-process"><strong>Installation Process</strong></a></li>
+<li><a href="#setting-qbittorrent-up"><strong>Setting qBittorrent Up</strong></a></li>
+<li><a href="#how-to-download-a-torrent-file"><strong>How to Download a Torrent File</strong></a></li>
+<li><a href="#how-to-seed-a-torrent-file"><strong>How to Seed a Torrent File</strong></a></li>
+<li><a href="#how-to-change-the-ui-theme"><strong>How to Change the UI Theme</strong></a></li>
+<li><a href="#how-to-add-plug-ins-to-qbittorrent">How To Add Plug-ins to qBittorrent</a></li>
+</ul><h2 id="why-use-qbittorrent">Why use qBittorrent?</h2><p>First of all: Why use qBittorrent, instead of µTorrent or any other torrent manager?</p><p>The answer is simple: qBittorrent is a much cleaner and reliable option in comparison to µTorrent. It is completely <strong>free</strong>, and does not have <strong>any ads or malware inside</strong>.</p><hr><h2 id="installation-process">Installation Process</h2><p>Commencing with the guide, the first thing we need to do is <a href="https://www.qbittorrent.org/download.php"><strong>download</strong></a> the latest version at the official site of qBittorrent. We select our OS, and it will redirect us to the next page.</p><p><img src="/images/qbittorrent-guide/downloadqb-1.png" alt=""></p><p>In my case, I select Windows.
+In this page we can select the version depending our OS architecture.</p><p><img src="/images/qbittorrent-guide/Downloadqb-2.png" alt=""></p><p>Just click in the version. In my case, Windows x64.
+Once we have the installer, we select our language, click on next, accept the terms of the License Agreement, and click on next again.</p><p>Up here, we can select the file association and well as other options. I always suggest to leave the last four options this way so we avoid some headaches later…</p><p><img src="/images/qbittorrent-guide/image-9.png" alt=""></p><p>Then, click on next, and select the installation path and it will begin to install qBittorent.</p><p><img src="/images/qbittorrent-guide/image-10.png" alt=""></p><hr><h2 id="setting-qbittorrent-up">Setting qBittorrent Up</h2><p>After the installation process, we can begin setting up our qBittorrent so it can run at 100% when we start to download/seed our torrents.</p><p>For this, we go to the options panel.</p><p><img src="/images/qbittorrent-guide/qBittorrentUI.png" alt=""></p><p>Here we go to the connection. And select these options if they are disabled or changed.</p><p><img src="/images/qbittorrent-guide/qBittorrent-Options.png" alt=""></p><p>In the “port used for incoming connections” option I recommend to enter a number between 45000 and 52000.
+Now, the next step is to set up our downloads. So we need to go to the BitTorrent section, and mark this option. These options will depend on how many downloads/uploads you want actively.</p><p><img src="/images/qbittorrent-guide/qBittorrent-Options-2.png" alt=""></p><hr><h2 id="how-to-download-a-torrent-file">How to Download a Torrent File</h2><p>At the moment we finish our configuration, we begin the easiest part: downloading a torrent.</p><p>For this, we need the torrent file that we want to download (of course). I will be downloading Night of the Living Dead **[**be <strong>really</strong> careful with the <strong>clone sites</strong>].</p><p><img src="/images/qbittorrent-guide/qBittorrent-Download-1.png" alt=""></p><p>Once we have our torrent, just click it. And because of we mark the file association, it will immediately recognize it.</p><p>In this window, at the left section, we can select the download path, and, at right section, we can see the inside of the torrent and select what we want to download. Then we select OK, and it will start to download the torrent file.</p><p><img src="/images/qbittorrent-guide/qBittorrent-Download-2-1.png" alt=""></p><p>Now, sometimes, the torrent will not initiate or download. This may be, because it doesn’t have <strong>Seeders</strong> or have too many <strong>Leechers</strong> (Peers). That’s why we need to <strong>always</strong> check out how many Seeders the torrents have, and how many Leechers, in proportion to the seeders, the torrent has.</p><p><img src="/images/qbittorrent-guide/qBittorrent-Download-3.png" alt=""></p><p>And that’s it for the download guide.</p><hr><h2 id="how-to-seed-a-torrent-file">How to Seed a Torrent File</h2><p>Sometimes, there will be some trackers that requires to seed a torrent before or after downloading one. qBittorrent activates this function right after we finish the torrent, but what if we want to seed a file that we don’t have in qBittorrent?</p><p>The zero step is having the downloaded files in our PC.</p><p>Then, we need to find the torrent download file we want to seed. I will be seeding Night of the Living Dead.</p><p>Now, we open the torrent file and we are going to look at the <strong>root folder</strong> (not the file folder). Notice that you will need <strong>all</strong> the <strong>same files and folder name</strong>. Otherwise, it won’t recognize the torrent as downloaded.</p><p><img src="/images/qbittorrent-guide/qBittorrent-seed-1.png" alt=""></p><p>And that’s all. It will begin to check the files and re-download the damaged blocks if there’s one. After the summary check, it will be appearing as “seeding”.</p><p><img src="/images/qbittorrent-guide/qBittorrent-seed-2.png" alt=""></p><hr><h2 id="how-to-change-the-ui-theme">How to Change the UI Theme</h2><p>First thing we need to do is download a compatible theme. I will be using <a href="https://github.com/jagannatharjun/qbt-theme"><strong>this one</strong></a>. After that, go to the options at the Behavior section. Then, mark “Use custom UI Theme” and select the downloaded .qbtheme file.</p><p><img src="/images/qbittorrent-guide/qBittorrent-theme.png" alt=""></p><p>Restart qBittorrent, and that should be for it.</p><p><img src="/images/qbittorrent-guide/image-19.png" alt=""></p><hr><h2 id="how-to-add-plug-ins-to-qbittorrent">How To Add Plug-ins to qBittorrent</h2><p>Another useful option for qBittorrent is the build-in search engine with which we can use to search specific torrents instead of visiting the site through our navigator. Thanks to Pope Sidious for bringing up this tutorial.</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin.png" alt=""></p><p>Before we proceed, it will ask us if we have Pythom installed if we don’t have it.</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin-2.png" alt="">
+<img src="/images/qbittorrent-guide/image-34.png" alt=""></p><p>Then, after the Pythom installation, we need to add the specific plugin of the sites like 1337x, limetorrents, among others to get it working.</p><p>By doing this, in our qBittorrent, there will be a new window section. We click on the second one and then we click on “Search Plugins…”</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin-3.png" alt=""></p><p>After this, it will pop-up the search plugin. On “install a new one” we can add manually a .py qBittorrent search plugin, like <a href="https://github.com/v1k45/1337x-qBittorrent-search-plugin">the one we are going to use</a>, for <a href="https://1337x.to/">1337x.to</a> or we can do an auto-search clicking in the “Check for updates” option (If you get an error, it’s the qBittorrent server. You will need to search the plugin manually).</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin-4.png" alt=""></p><p>There are two ways to add an engine manually. The first one, as we said, is downloading a compatible .py, but, the second way, it’s more easy to set up and does not requires to download anything.</p><p>First, click on the .py file</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin-5.png" alt=""></p><p>Then, select the Raw option and copy the link of the new window</p><p><img src="/images/qbittorrent-guide/qBittorrent-plugin-6.png" alt=""></p><p>Go to qBittorrent and paste it on the “web link” option from the “install a new one” and click Ok.</p><p><img src="/images/qbittorrent-guide/image-1.png" alt=""></p><p>After this, we can search from the trackers we added before.</p><p><img src="/images/qbittorrent-guide/image-3.png" alt=""></p><p>You can also see how many Seeders/Leechers the Torrent has.
+Be careful with the downloads because you can not see who upload the link and you may be dowloading a dangerous file. <strong>You are at your own risk</strong>.</p>
+      </article>
+    </div>
+
+    <div class="flex justify-left mb-10 max-w-full md:max-w-xl lg:max-w-2xl max-h-full">
+      <div class="flex flex-row bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-xl">
+        <img class="h-auto w-48 max-w-full object-cover" style="-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));" src="/src/data/authors/egodeer.jpg" alt="EgoDeer's profile image'">
+        <div class="p-6 flex flex-col justify-start">
+          <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">ABOUT THE AUTHOR</p>
+          <h5 class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1">EgoDeer</h5>
+          <p class="text-neutral-700 dark:text-neutral-200 text-base mb-4">
+            Your friendly neighborhood EgoDeer.
+          </p>
+          <button class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"> <a href="/author/EgoDeer">All Posts</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-3xl mb-1">Related Articles:</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-y-10">
+        <article class="flex justify-between group md:flex-col-reverse">
+  <div class="flex md:flex-col md:flex-1">
+    <a href="/posts/activate-windows-free" class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1">
+      <img class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-50" alt="Activate Windows for Free" src="/images/activate-windows-free/thumb.jpg">
+    </a>
+    <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
+      <a href="/posts/activate-windows-free" class="no-underline">
+        <h3 class="text-xl font-medium leading-6">Activate Windows for Free</h3>
+      </a>
+      <p class="flex flex-wrap items-center text-sm">
+        May 29, 2022 · <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 ml-1 mr-1" viewBox="0 0 32 32">
+          <path d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z">
+          </path>
+        </svg> 3 min read
+      </p>
+    </div>
+  </div>
+</article><article class="flex justify-between group md:flex-col-reverse">
+  <div class="flex md:flex-col md:flex-1">
+    <a href="/posts/debloat-jdownloader" class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1">
+      <img class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-50" alt="De-bloat JDownloader2" src="/images/debloat-jdownloader/thumb.png">
+    </a>
+    <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
+      <a href="/posts/debloat-jdownloader" class="no-underline">
+        <h3 class="text-xl font-medium leading-6">De-bloat JDownloader2</h3>
+      </a>
+      <p class="flex flex-wrap items-center text-sm">
+        March 3, 2022 · <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 ml-1 mr-1" viewBox="0 0 32 32">
+          <path d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z">
+          </path>
+        </svg> 1 min read
+      </p>
+    </div>
+  </div>
+</article><article class="flex justify-between group md:flex-col-reverse">
+  <div class="flex md:flex-col md:flex-1">
+    <a href="/posts/usenet-on-windows" class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1">
+      <img class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-50" alt="Setting Up Usenet on Windows" src="/images/usenet-on-windows/thumb.jpg">
+    </a>
+    <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
+      <a href="/posts/usenet-on-windows" class="no-underline">
+        <h3 class="text-xl font-medium leading-6">Setting Up Usenet on Windows</h3>
+      </a>
+      <p class="flex flex-wrap items-center text-sm">
+        February 27, 2022 · <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 ml-1 mr-1" viewBox="0 0 32 32">
+          <path d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z">
+          </path>
+        </svg> 6 min read
+      </p>
+    </div>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+		</div>
+	</div>
+<footer class="pt-4 md:pt-6 text-sm text-gray-700 dark:text-gray-400 pb-7 text-center">
+  <span>&copy; 2022 Morris Motel, Powered by
+    <a class="link" href="https://ipfs.io/" target="_blank"> IPFS </a>
+  </span>
+  <ul class="flex gap-7 right-0">
+    <li>
+      <a class="menu-item" href="/privacypolicy/">Privacy</a>
+    </li>
+    <li>
+      <a class="menu-item" href="/contribute/">Contribute</a>
+    </li>
+    <li>
+      <a class="menu-item" href="mailto:contact@morrismotel.com">contact@morrismotel.com</a>
+    </li>
+    <li>
+      <a class="menu-item" href="https://discord.gg/AMrV3yjC4y">Discord</a>
+    </li>
+    <li>
+      <a class="menu-item" href="https://matrix.to/#/#morrismotel:morrismotel.com">Matrix</a>
+    </li>
+  </ul>
+</footer>
+
+</body></html>
