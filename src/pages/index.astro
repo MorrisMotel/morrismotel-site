@@ -4,8 +4,9 @@ import Article from "@components/article";
 import ListPost from "@components/listpost";
 import { getAllPosts } from "src/lib/posts";
 const posts = await Promise.all(await getAllPosts())
+const sortedPosts = posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
 const allTags = [...new Set(posts.flatMap(({ tags }) => tags))]
-const latestPost = posts[0]
+const latestPost = sortedPosts[0]
 ---
 
 <BaseLayout>
@@ -26,7 +27,7 @@ const latestPost = posts[0]
   <div class="mb-10">
     <h2 class="text-3xl mb-1">Latest Articles:</h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
-      {posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()).slice(1, 5).map((p) =>
+      {sortedPosts.slice(1, 5).map((p) =>
       <Article post={p} />)}
     </div>
   </div>
