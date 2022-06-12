@@ -16,15 +16,13 @@ if (!img) img = Astro.site + 'card.png'
 ---
 
 <head>
-
 	<!-- essential -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- core -->
 	{title && <title>{title}</title>}
-	{desc &&
-	<meta name="description" content={desc}>}
+	{desc && <meta name="description" content={desc}>}
 	<!-- twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	{title &&
@@ -59,7 +57,5 @@ if (!img) img = Astro.site + 'card.png'
 	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fff">
 	<meta name="msapplication-TileColor" content="#fff">
 	<meta name="theme-color" content="#000">
-
-	<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 	<slot />
 </head>
