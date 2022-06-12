@@ -2,9 +2,9 @@ If you've never written a post for Morris Motel, you can become an author by add
 The format for the `authors.json` is as follows:
 ```json
 "Authorname": {
-      "name": "Authorname",
-      "image": "/src/data/authors/authorname.jpeg",
-      "desc": "A brief description of yourself."
+  "name": "Authorname",
+  "image": "/src/data/authors/authorname.jpeg",
+  "desc": "A brief description of yourself."
 }
 ```
 Make sure to add a comma after the last author in the file before you add your own, or else it'll produce an error.
