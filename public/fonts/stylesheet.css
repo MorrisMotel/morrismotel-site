@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Mabry Pro";
-  src: local("Mabry Pro Bold"), local("MabryPro-Bold"), url("./MabryPro/MabryPro-Bold.woff2") format("woff2"),
-    url("./MabryPro/MabryPro-Bold.woff") format("woff");
+  src: local("Mabry Pro Bold"), local("MabryPro-Bold"), url("/fonts/MabryPro/MabryPro-Bold.woff2") format("woff2"),
+    url("/fonts/MabryPro/MabryPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("./Manrope/webfonts/Manrope-Regular.woff2") format("woff2");
+  src: url("/fonts/Manrope/webfonts/Manrope-Regular.woff2") format("woff2");
   font-weight: Regular;
   font-style: normal;
   font-display: swap;
@@ -17,19 +17,19 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url("./Manrope/webfonts/Manrope-ExtraLight.woff2") format('woff2') font-weight-extralight,
-       url("./Manrope/webfonts/Manrope-Light.woff2") format('woff2') font-weight-light,
-       url("./Manrope/webfonts/Manrope-Regular.woff2") format('woff2') font-weight-normal,
-       url("./Manrope/webfonts/Manrope-Medium.woff2") format('woff2') font-weight-medium,
-       url("./Manrope/webfonts/Manrope-Semibold.woff2") format('woff2') font-weight-semibold,
-       url("./Manrope/webfonts/Manrope-Bold.woff2") format('woff2') font-weight-bold,
-       url("./Manrope/webfonts/Manrope-ExtraBold.woff2") format('woff2') font-weight-extrabold,
+  src: url("/fonts/Manrope/webfonts/Manrope-ExtraLight.woff2") format('woff2') font-weight-extralight,
+       url("/fonts/Manrope/webfonts/Manrope-Light.woff2") format('woff2') font-weight-light,
+       url("/fonts/Manrope/webfonts/Manrope-Regular.woff2") format('woff2') font-weight-normal,
+       url("/fonts/Manrope/webfonts/Manrope-Medium.woff2") format('woff2') font-weight-medium,
+       url("/fonts/Manrope/webfonts/Manrope-Semibold.woff2") format('woff2') font-weight-semibold,
+       url("/fonts/Manrope/webfonts/Manrope-Bold.woff2") format('woff2') font-weight-bold,
+       url("/fonts/Manrope/webfonts/Manrope-ExtraBold.woff2") format('woff2') font-weight-extrabold,
 
-       url("./Manrope/webfonts/Manrope-ExtraLightItalic.ttf") format('truetype') font-italic font-weight-extralight,
-       url("./Manrope/webfonts/Manrope-LightItalic.ttf") format('truetype') font-italic font-weight-light,
-       url("./Manrope/webfonts/Manrope-RegularItalic.ttf") format('truetype') font-italic font-weight-normal,
-       url("./Manrope/webfonts/Manrope-MediumItalic.ttf") format('truetype') font-italic font-weight-medium,
-       url("./Manrope/webfonts/Manrope-SemiboldItalic.ttf") format('truetype') font-italic font-weight-semibold,
-       url("./Manrope/webfonts/Manrope-BoldItalic.ttf") format('truetype') font-italic font-weight-bold,
-       url("./Manrope/webfonts/Manrope-ExtraBoldItalic.ttf") format('truetype') font-italic font-weight-extrabold,
+       url("/fonts/Manrope/webfonts/Manrope-ExtraLightItalic.ttf") format('truetype') font-italic font-weight-extralight,
+       url("/fonts/Manrope/webfonts/Manrope-LightItalic.ttf") format('truetype') font-italic font-weight-light,
+       url("/fonts/Manrope/webfonts/Manrope-RegularItalic.ttf") format('truetype') font-italic font-weight-normal,
+       url("/fonts/Manrope/webfonts/Manrope-MediumItalic.ttf") format('truetype') font-italic font-weight-medium,
+       url("/fonts/Manrope/webfonts/Manrope-SemiboldItalic.ttf") format('truetype') font-italic font-weight-semibold,
+       url("/fonts/Manrope/webfonts/Manrope-BoldItalic.ttf") format('truetype') font-italic font-weight-bold,
+       url("/fonts/Manrope/webfonts/Manrope-ExtraBoldItalic.ttf") format('truetype') font-italic font-weight-extrabold,
 }
