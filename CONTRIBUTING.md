@@ -1,10 +1,18 @@
-First off, you're going to need an account on GitLab. If you don't have one already, go ahead and create one.  
-Next, make a fork of the repository. On the home page for the project, there's a fork button next to the star button in the top right.  
+Regardless of the type of contribution you wish to make to the Morris Motel project, you're going to need an account on GitLab. If you don't have one already, go ahead and create one.
+
+From here, it depends on what you'd like to contribute.  
+Any *corrections* to articles that already exist should be suggested using **Issues**.  
+For articles you'd like to *write* or *code contributions,* skip to the "Writing an Article / Code Contributions" heading.
+
+# Writing an Article / Code Contributions
+Make a fork of the repository. On the home page for the project, there's a fork button next to the star button in the top right.  
 In that fork, you can make any edits to the code (including posts) that you'd like, without modifying the live website.  
 Once you're done, create a merge request. Cain will then review the modifications, make corrections, and/or merge your edits to the main repository.
 
 For code contributions, you probably know what you're doing so... go at it.  
-For ARTICLE contributions, here's a guide...
+For ARTICLE contributions, read on...
+
+## Not an Author Yet?
 
 If you've never written a post for Morris Motel, you can become an author by adding your information to the `authors.json` file, and then write a post. 
 The format for the `authors.json` is as follows:
@@ -17,6 +25,8 @@ The format for the `authors.json` is as follows:
 ```
 Make sure to add a comma after the last author in the file before you add your own, or else it'll produce an error.
 Then, write a post. 
+
+## Writing a Post
 
 How do you write a post, you ask?
 
