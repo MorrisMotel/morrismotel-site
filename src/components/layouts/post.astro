@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "./baselayout.astro";
 import RelatedArticles from "../relatedArticles.astro";
-import { getReadingTime } from '../../lib/readingtime.js';
 import { dateFilter } from "../../lib/dateFilter.js";
 import authorData from '../../data/authors/authors.json';
 
@@ -37,7 +36,7 @@ const author = authorData[post.content.author]
     </div>
 
     <div class="flex justify-left mb-10 max-w-full md:max-w-xl lg:max-w-2xl max-h-full">
-      <div class="flex flex-row bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-xl">
+      <div class="flex flex-row bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-2xl">
         <img class="h-auto w-48 max-w-full object-cover" style="-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));"
           src={author.image} alt={`${author.name}'s profile image'`} />
         <div class="p-6 flex flex-col justify-start">
