@@ -1,5 +1,5 @@
 {
-  "name": "daisy-blog",
+  "name": "morrismotel-site",
   "version": "0.1.0",
   "private": false,
   "scripts": {
@@ -12,7 +12,7 @@
     "@astrojs/sitemap": "^0.1.0",
     "@astrojs/tailwind": "^0.2.1",
     "@tailwindcss/typography": "^0.5.2",
-    "astro": "^1.0.0-beta.27",
+    "astro": "^1.0.0-rc.3",
     "autoprefixer": "^10.4.2",
     "prettier": "^2.6.2",
     "prettier-plugin-astro": "^0.0.12",
@@ -25,7 +25,6 @@
     "@astrojs/compiler": "^0.14.2",
     "@astrojs/preact": "^0.1.2",
     "@astrojs/react": "^0.1.2",
-    "daisyui": "^2.15.0",
     "readingtime": "^0.0.2",
     "remark-reading-time": "^2.0.1"
   }
