@@ -9,6 +9,10 @@
   padding: 1rem;
 }
 
+body { 
+  overflow: auto;
+}
+
 @layer utilities {
 
   h1,
