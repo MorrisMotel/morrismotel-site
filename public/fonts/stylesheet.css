@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter.css');
+
 @font-face {
   font-family: "Mabry Pro";
   src: local("Mabry Pro Bold"), local("MabryPro-Bold"), url("/fonts/MabryPro/MabryPro-Bold.woff2") format("woff2"),
@@ -7,15 +9,7 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/Manrope/webfonts/Manrope-Regular.woff2") format("woff2");
-  font-weight: Regular;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
+/* @font-face {
   font-family: 'Manrope';
   src: url("/fonts/Manrope/webfonts/Manrope-ExtraLight.woff2") format('woff2') font-weight-extralight,
        url("/fonts/Manrope/webfonts/Manrope-Light.woff2") format('woff2') font-weight-light,
@@ -32,4 +26,4 @@
        url("/fonts/Manrope/webfonts/Manrope-SemiboldItalic.ttf") format('truetype') font-italic font-weight-semibold,
        url("/fonts/Manrope/webfonts/Manrope-BoldItalic.ttf") format('truetype') font-italic font-weight-bold,
        url("/fonts/Manrope/webfonts/Manrope-ExtraBoldItalic.ttf") format('truetype') font-italic font-weight-extrabold,
-}
+} */
