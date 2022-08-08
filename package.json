@@ -25,6 +25,7 @@
     "@astrojs/compiler": "^0.14.2",
     "@astrojs/preact": "^0.1.2",
     "@astrojs/react": "^0.1.2",
+    "@astrojs/rss": "^0.2.2",
     "readingtime": "^0.0.2",
     "remark-reading-time": "^2.0.1"
   }
