@@ -15,4 +15,4 @@ yarn-error.log*
 /.vscode
 
 # Astro exports
-dist/
+dist/**
