@@ -1,20 +1,22 @@
 ---
   import { dateFilter } from "../lib/dateFilter.js";
   const post = Astro.props.post;
+  const slug = post?.slug || post?.frontmatter?.slug;
+  const slugUrl = `/posts/${slug}`;
 ---
 
-<article class="flex justify-between group md:flex-col-reverse">
+<article class="group flex justify-between group md:flex-col-reverse">
   <div class="flex md:flex-col md:flex-1">
-    <a href={`/posts/${post?.slug || post?.frontmatter?.slug}`}
+    <a href={slugUrl}
       class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1">
       <img
-        class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-50"
+        class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-70"
         alt={post?.title || post?.frontmatter?.title} src={(post?.img || post?.frontmatter?.img)
         ?? "/images/fallback.png" } />
     </a>
     <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
-      <a href={`/posts/${post?.slug || post?.frontmatter?.slug}`} class="no-underline">
-        <h3 class="text-xl font-medium leading-6" set:html={post?.title || post?.frontmatter?.title}>
+      <a href={slugUrl} class="no-underline">
+        <h3 class="text-xl font-medium leading-6 group-hover:text-blue-500 transition-colors duration-300" set:html={post?.title || post?.frontmatter?.title}>
         </h3>
       </a>
       <p class="flex flex-wrap items-center text-sm">
