@@ -1,51 +1,70 @@
 ---
-import BaseLayout from "@layouts/baselayout";
-import Article from "@components/article";
-import ListPost from "@components/listpost";
-import { getAllPosts } from "src/lib/posts";
-const posts = await Promise.all(await getAllPosts())
-const sortedPosts = posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
-const allTags = [...new Set(posts.flatMap(({ tags }) => tags))]
-const latestPost = sortedPosts[0]
+import BaseLayout from '@layouts/baselayout';
+import Article from '@components/article';
+import ListPost from '@components/listpost';
+import { getAllPosts } from 'src/lib/posts';
+const posts = await Promise.all(await getAllPosts());
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf(),
+);
+const allTags = [...new Set(posts.flatMap(({ tags }) => tags))];
+const latestPost = sortedPosts[0];
 ---
 
 <BaseLayout>
-  <div class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
+  <div
+    class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
     style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${latestPost.img}');
-    background-repeat: no-repeat; background-position: center center; background-size: cover;`}>
+    background-repeat: no-repeat; background-position: center center; background-size: cover;`}
+  >
     <div class="text-center text-neutral-content">
       <div class="max-w-md">
-        <h1 class="mb-2 text-4xl font-bold text-white"><a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a></h1>
-        <p>{latestPost.desc}</p>
+        <h1 class="mx-3 md:mx-0 mb-2 text-4xl font-bold text-white">
+          <a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a>
+        </h1>
+        <p class="mx-3 md:mx-0">{latestPost.desc}</p>
         <h5 class="mb-4 mt-2 tracking-normal">MOST RECENT ARTICLE</h5>
-        <button type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"><a
-            href={`/posts/${latestPost.slug}`}>Read</a></button>
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"
+          ><a href={`/posts/${latestPost.slug}`}>Read</a>
+        </button>
       </div>
     </div>
   </div>
   <div class="mb-10">
     <h2 class="text-3xl mb-2">Latest Articles:</h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
-      {sortedPosts.slice(1, 5).map((p) =>
-      <Article post={p} />)}
+      {sortedPosts.slice(1, 5).map((p) => <Article post={p} />)}
     </div>
   </div>
   <section>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 mt-5">
-      {allTags.map(tag => (
-      <div>
-        <header class="border-b border-current mb-3"><a href={`/tags/${tag}`}
-            class='hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200 text-xl font-medium'>
-            <h2 class="inline mr-4">#{tag}</h2>
-            <p class="inline text-sm">{posts.filter((post) => post.tags.includes(tag)).length} {posts.filter((post) =>
-              post.tags.includes(tag)).length < 2 ? 'article' : 'articles' }</p>
-          </a></header>
-        <ul>
-          {posts.filter((post) => post.tags.includes(tag)).sort((a, b) => a.title.localeCompare(b.title)).map(p =>
-          <ListPost post={p} />)}
-        </ul>
-      </div>
+      {allTags.map((tag) => (
+        <div>
+          <header class="border-b border-current mb-3">
+            <a
+              href={`/tags/${tag}`}
+              class="hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-200 text-xl font-medium"
+            >
+              <h2 class="inline mr-4">#{tag}</h2>
+              <p class="inline text-sm">
+                {posts.filter((post) => post.tags.includes(tag)).length}{' '}
+                {posts.filter((post) => post.tags.includes(tag)).length < 2
+                  ? 'article'
+                  : 'articles'}
+              </p>
+            </a>
+          </header>
+          <ul>
+            {posts
+              .filter((post) => post.tags.includes(tag))
+              .sort((a, b) => a.title.localeCompare(b.title))
+              .map((p) => (
+                <ListPost post={p} />
+              ))}
+          </ul>
+        </div>
       ))}
     </div>
   </section>

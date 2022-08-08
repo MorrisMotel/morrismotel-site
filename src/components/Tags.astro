@@ -1,14 +1,21 @@
 ---
-    import { getAllPosts } from '../lib/posts'
-    const posts = await Promise.all(await getAllPosts())
-    const allTags = [...new Set(posts.flatMap(({ tags }) => tags))]
+import { getAllPosts } from '../lib/posts';
+const posts = await Promise.all(await getAllPosts());
+const allTags = [...new Set(posts.flatMap(({ tags }) => tags))];
 ---
 
 <div class="text-center mb-10">
-    <ul class="inline-block">
-        {allTags.map(tag =>
-        <li class="float-left"><a role="button" href={`/tags/${tag}`}
-                class='hover:text-blue-600 dark:hover:text-blue-500 hover:bg-base-content transition-colors duration-200 mx-2 text-sm rounded-xl font-medium btn btn-outline'>#{tag}</a>
-        </li>)}
-    </ul>
+  <ul class="inline-block">
+    {allTags.map((tag) => (
+      <li class="sm:float-left">
+        <a
+          role="button"
+          href={`/tags/${tag}`}
+          class="hover:text-blue-600 dark:hover:text-blue-500 hover:bg-base-content transition-colors duration-200 mx-2 text-sm rounded-xl font-medium btn btn-outline"
+        >
+          #{tag}
+        </a>
+      </li>
+    ))}
+  </ul>
 </div>

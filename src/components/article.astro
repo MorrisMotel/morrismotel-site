@@ -1,31 +1,46 @@
 ---
-  import { dateFilter } from "../lib/dateFilter.js";
-  const post = Astro.props.post;
-  const slug = post?.slug || post?.frontmatter?.slug;
-  const slugUrl = `/posts/${slug}`;
+import { dateFilter } from '../lib/dateFilter.js';
+const post = Astro.props.post;
+const slug = post?.slug || post?.frontmatter?.slug;
+const slugUrl = `/posts/${slug}`;
+const title = post?.title || post?.frontmatter?.title;
+const imgUrl = (post?.img || post?.frontmatter?.img) ?? '/images/fallback.png';
+const date = dateFilter(post?.date || post?.frontmatter?.date);
 ---
 
 <article class="group flex justify-between group md:flex-col-reverse">
   <div class="flex md:flex-col md:flex-1">
-    <a href={slugUrl}
-      class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1">
+    <a
+      href={slugUrl}
+      class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1"
+    >
       <img
         class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-70"
-        alt={post?.title || post?.frontmatter?.title} src={(post?.img || post?.frontmatter?.img)
-        ?? "/images/fallback.png" } />
+        alt={title}
+        src={imgUrl}
+      />
     </a>
     <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
       <a href={slugUrl} class="no-underline">
-        <h3 class="text-xl font-medium leading-6 group-hover:text-blue-500 transition-colors duration-300" set:html={post?.title || post?.frontmatter?.title}>
+        <h3
+          class="text-xl font-medium leading-6 group-hover:text-blue-500 transition-colors duration-300 mr-2 sm:mr-0"
+          set:html={title}
+        >
         </h3>
       </a>
       <p class="flex flex-wrap items-center text-sm">
-        {dateFilter(post?.date || post?.frontmatter?.date)} · <svg xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor" class="w-5 h-5 ml-1 mr-1" viewBox="0 0 32 32">
+        {date} · <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="w-5 h-5 ml-1 mr-1"
+          viewBox="0 0 32 32"
+        >
           <path
-            d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z">
+            d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"
+          >
           </path>
-        </svg> {post.readingTime}
+        </svg>
+        {post.readingTime}
       </p>
     </div>
   </div>

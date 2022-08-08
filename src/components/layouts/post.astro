@@ -1,21 +1,45 @@
 ---
-import BaseLayout from "./baselayout.astro";
-import RelatedArticles from "../relatedArticles.astro";
-import { dateFilter } from "../../lib/dateFilter.js";
+import BaseLayout from './baselayout.astro';
+import RelatedArticles from '../relatedArticles.astro';
+import { dateFilter } from '../../lib/dateFilter.js';
 import authorData from '../../data/authors/authors.json';
 
 const post = Astro.props;
-const author = authorData[post.content.author]
-
+const author = authorData[post.content.author];
 ---
 
-<BaseLayout title={post.content.title} description={post.content.desc} image={post.content.img} post={true}>
-  <div class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
-    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${post.content.img}')`}>
+<BaseLayout
+  title={post.content.title}
+  description={post.content.desc}
+  image={post.content.img}
+  post={true}
+>
+  <style>
+    @media (min-width: 768px) {
+      .pfp {
+        -webkit-mask-image: -webkit-linear-gradient(
+          left,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0)
+        );
+      }
+    }
+  </style>
+  <div
+    class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
+    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${post.content.img}')`}
+  >
     <div class="items-center">
-      <h1 class="text-3xl md:text-5xl font-bold" set:html={post.content.title} />
-      <p class="text-lg text-center">
-        <a class="hover:text-blue-500 transition-colors duration-200" href={`/author/${author.name}`}>
+      <h1
+        class="text-center mx-3 md:mx-0 text-3xl md:text-5xl font-bold"
+        set:html={post.content.title}
+      >
+      </h1>
+      <p class="mx-3 md:mx-0 text-lg text-center">
+        <a
+          class="hover:text-blue-500 transition-colors duration-200"
+          href={`/author/${author.name}`}
+        >
           Written by {author.name}
         </a>on {dateFilter(post.content.date)}
       </p>
@@ -35,17 +59,38 @@ const author = authorData[post.content.author]
       </article>
     </div>
 
-    <div class="flex justify-left mb-10 max-w-full md:max-w-xl lg:max-w-2xl max-h-full">
-      <div class="flex flex-row bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-2xl">
-        <img class="h-auto w-48 max-w-full object-cover" style="-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));"
-          src={author.image} alt={`${author.name}'s profile image'`} />
+    <div
+      class="flex justify-left mb-10 max-w-full md:max-w-xl lg:max-w-2xl max-h-full"
+    >
+      <div
+        class="sm:flex bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-2xl"
+      >
+        <div class="sm:shrink-0">
+          <img
+            class="h-auto w-full object-cover sm:h-full sm:w-48 pfp"
+            src={author.image}
+            alt={`${author.name}'s profile image'`}
+          />
+        </div>
         <div class="p-6 flex flex-col justify-start">
-          <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">ABOUT THE AUTHOR</p>
-          <h5 class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1">{author.name}</h5>
-          <p class="text-neutral-700 dark:text-neutral-200 text-base mb-4">
+          <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">
+            ABOUT THE AUTHOR
+          </p>
+          <h5
+            class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1"
+          >
+            {author.name}
+          </h5>
+          <p
+            class="text-neutral-700 dark:text-neutral-200 text-sm md:text-base mb-4 mr-2"
+          >
             {author?.desc}
           </p>
-          <button class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"> <a href={`/author/${author.name}`}>All Posts</a></button>
+          <button
+            class="max-w-fit sm:max-w-full text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"
+          >
+            <a href={`/author/${author.name}`}>All Posts</a>
+          </button>
         </div>
       </div>
     </div>
