@@ -6,9 +6,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif', ...defaultTheme.fontFamily.sans],
-        mono: ['Fira Code', 'monospaced', ...defaultTheme.fontFamily.mono],
+        mono: ['Space Mono', 'monospaced', ...defaultTheme.fontFamily.mono],
       },
     },
   },
-  darkMode: 'class',
+  darkMode: 'media',
 };

@@ -9,30 +9,17 @@
   padding: 1rem;
 }
 
-body { 
+body {
   overflow: auto;
 }
 
 @layer utilities {
-
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .logo-text {
-    font-family: "Mabry Pro";
-    text-rendering: optimizeLegibility;
-  }
-
-  h1,
-  h2,
   .logo-text {
     letter-spacing: -1px;
   }
 
-  .menu :where(li)> :where(*:not(ul)) {
+  .menu :where(li) > :where(*:not(ul)) {
     padding: 0.5rem;
     margin-right: 0.3rem;
     margin-left: 0.3rem;

@@ -6,6 +6,7 @@ const slugUrl = `/posts/${slug}`;
 const title = post?.title || post?.frontmatter?.title;
 const imgUrl = (post?.img || post?.frontmatter?.img) ?? '/images/fallback.png';
 const date = dateFilter(post?.date || post?.frontmatter?.date);
+const readTime = post?.minutesRead || post?.frontmatter?.minutesRead;
 ---
 
 <article class="group flex justify-between group md:flex-col-reverse">
@@ -40,7 +41,7 @@ const date = dateFilter(post?.date || post?.frontmatter?.date);
           >
           </path>
         </svg>
-        {post.readingTime}
+        {readTime}
       </p>
     </div>
   </div>
