@@ -1,14 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
-  content: ["./src/**/*.{astro,html,svelte,vue,js,ts}"],
-  plugins: [require("@tailwindcss/typography")],
+  content: ['./src/**/*.{astro,html,svelte,vue,js,ts}'],
+  plugins: [require('@tailwindcss/typography')],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif", ...defaultTheme.fontFamily.sans],
-        mono: ["Fira Code", "monospaced", ...defaultTheme.fontFamily.mono],
+        sans: ['Space Grotesk', 'sans-serif', ...defaultTheme.fontFamily.sans],
+        mono: ['Fira Code', 'monospaced', ...defaultTheme.fontFamily.mono],
       },
     },
   },
-  darkMode: 'class'
+  darkMode: 'class',
 };

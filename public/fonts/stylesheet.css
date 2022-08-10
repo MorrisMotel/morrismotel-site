@@ -1,4 +1,31 @@
-@import url('https://rsms.me/inter/inter.css');
+/* @font-face {
+  font-family: "Space Grotesk";
+  src: url("./SpaceGrotesk/woff2/SpaceGrotesk[wght].woff2")
+    format("woff2-variations");
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
+} */
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("./Epilogue/variable/Epilogue[wght].woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Epilogue Italic";
+  src: url("./Epilogue/variable/Epilogue-Italic[wght].woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
+}
+
+/* @import url('https://rsms.me/inter/inter.css');
 
 @font-face {
   font-family: "Mabry Pro";
@@ -9,7 +36,7 @@
   font-display: swap;
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Manrope';
   src: url("/fonts/Manrope/webfonts/Manrope-ExtraLight.woff2") format('woff2') font-weight-extralight,
        url("/fonts/Manrope/webfonts/Manrope-Light.woff2") format('woff2') font-weight-light,

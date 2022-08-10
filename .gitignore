@@ -10,9 +10,11 @@ yarn-error.log*
 .env
 .env.production
 
-# macOS-specific files
 .DS_Store
-/.vscode
+.vscode
+.idea
+.stackblitzrc
+.prettierrc.cjs
+.npmrc
 
-# Astro exports
 dist/**
