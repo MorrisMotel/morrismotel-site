@@ -14,15 +14,33 @@ body {
 }
 
 @layer utilities {
-  h1,
+  /* h1,
   .logo-text {
     letter-spacing: -1px;
+  } */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .logo-text {
+    font-family: "MADE Outer Sans", sans-serif;
+  }
+
+  h2 {
+    font-weight: 500;
   }
 
   .menu :where(li) > :where(*:not(ul)) {
     padding: 0.5rem;
     margin-right: 0.3rem;
     margin-left: 0.3rem;
+  }
+
+  .prose :where(h2):not(:where([class~="not-prose"] *)) {
+    font-weight: 500 !important;
   }
 
   .prose :where(h1):not(:where([class~="not-prose"] *)) {
@@ -41,11 +59,6 @@ body {
 
   .badge {
     padding: 0px;
-  }
-
-  .btn-ghost:hover,
-  .btn-ghost.btn-active {
-    --tw-bg-opacity: 0.1;
   }
 
   .ring {

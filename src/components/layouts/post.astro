@@ -14,34 +14,36 @@ const author = authorData[post.content.author];
   image={post.content.img}
   post={true}
 >
-  <style>
-    @media (min-width: 768px) {
-      .pfp {
-        -webkit-mask-image: -webkit-linear-gradient(
-          left,
-          rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0)
-        );
-      }
-    }
-  </style>
   <div
     class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
     style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${post.content.img}')`}
   >
     <div class="items-center">
       <h1
-        class="text-center mx-3 md:mx-0 text-3xl md:text-5xl font-bold"
+        class="text-center mx-3 md:mx-0 text-3xl md:text-5xl font-[500] uppercase"
         set:html={post.content.title}
       >
       </h1>
-      <p class="mx-3 md:mx-0 text-lg text-center">
+      <p
+        class="mx-3 md:mx-0 text-lg text-center absolute sm:relative invisible sm:visible"
+      >
         <a
           class="hover:text-blue-500 transition-colors duration-200"
           href={`/author/${author.name}`}
         >
           Written by {author.name}
         </a>on {dateFilter(post.content.date)}
+      </p>
+
+      <p
+        class="relative sm:absolute visible sm:invisible mx-3 md:mx-0 text-lg text-center"
+      >
+        {dateFilter(post.content.date)}
+        <a
+          class="hover:text-blue-500 transition-colors duration-200 font-semibold block -mt-1"
+          href={`/author/${author.name}`}
+          >By {author.name}
+        </a>
       </p>
       <!-- <ul>
         {post.content.tags.map((tag) =>
@@ -60,14 +62,14 @@ const author = authorData[post.content.author];
     </div>
 
     <div
-      class="flex justify-left mb-10 max-w-full md:max-w-xl lg:max-w-2xl max-h-full"
+      class="flex justify-left mb-10 max-w-xs md:max-w-xl lg:max-w-2xl max-h-full"
     >
       <div
         class="sm:flex bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-2xl"
       >
         <div class="sm:shrink-0">
           <img
-            class="h-auto w-full object-cover sm:h-full sm:w-48 pfp"
+            class="object-cover aspect-square"
             src={author.image}
             alt={`${author.name}'s profile image'`}
           />
@@ -98,7 +100,7 @@ const author = authorData[post.content.author];
     <div>
       <h2 class="text-3xl mb-1">Related Articles:</h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-y-10">
-        <RelatedArticles post={post} />
+        <RelatedArticles {post} />
       </div>
     </div>
   </section>
