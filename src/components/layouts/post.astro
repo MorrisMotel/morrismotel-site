@@ -61,47 +61,29 @@ const author = authorData[post.content.author];
       </article>
     </div>
 
-    <div
-      class="flex justify-left mb-10 max-w-xs md:max-w-xl lg:max-w-2xl max-h-full"
+    <a
+      class="w-64 md:w-full flex flex-col items-center bg-neutral-300 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl"
     >
-      <div
-        class="sm:flex bg-neutral-300 dark:bg-neutral-900 shadow-lg overflow-hidden rounded-2xl"
-      >
-        <div class="sm:shrink-0">
-          <img
-            class="object-cover aspect-square"
-            src={author.image}
-            alt={`${author.name}'s profile image'`}
-          />
-        </div>
-        <div class="p-6 flex flex-col justify-start">
-          <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">
-            ABOUT THE AUTHOR
-          </p>
-          <h5
-            class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1"
-          >
-            {author.name}
-          </h5>
-          <p
-            class="text-neutral-700 dark:text-neutral-200 text-sm md:text-base mb-4 mr-2"
-          >
-            {author?.desc}
-          </p>
-          <button
-            class="max-w-fit sm:max-w-full text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-2"
-          >
-            <a href={`/author/${author.name}`}>All Posts</a>
-          </button>
-        </div>
+      <img
+        class="object-cover w-64 h-auto md:h-52 md:w-56 md:mr-1 md:rounded-l-2xl"
+        src={author.image}
+        alt={`${author.name}'s profile image'`}
+      />
+      <div class="flex flex-col justify-between p-4 leading-normal">
+        <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">
+          ABOUT THE AUTHOR
+        </p>
+        <h5
+          class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1"
+        >
+          {author.name}
+        </h5>
+        <p
+          class="text-neutral-700 dark:text-neutral-200 text-sm md:text-base mb-4 mr-2"
+        >
+          {author?.desc}
+        </p>
       </div>
-    </div>
-
-    <div>
-      <h2 class="text-3xl mb-1">Related Articles:</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-y-10">
-        <RelatedArticles {post} />
-      </div>
-    </div>
+    </a>
   </section>
 </BaseLayout>
