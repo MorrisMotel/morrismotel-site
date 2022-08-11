@@ -40,7 +40,11 @@ body {
   }
 
   .prose :where(h2):not(:where([class~="not-prose"] *)) {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
+  }
+
+  .prose :where(h3):not(:where([class~="not-prose"] *)) {
+    font-weight: 300 !important;
   }
 
   .prose :where(h1):not(:where([class~="not-prose"] *)) {

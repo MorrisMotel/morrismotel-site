@@ -1,26 +1,26 @@
 ---
 layout: ../../components/layouts/post.astro
-title: "MP3 vs. FLAC"
+title: 'MP3 vs. FLAC'
 slug: mp3-vs-flac
 date: 2022-04-22
 author: Cain
-desc: "MPEG (The Moving Picture Experts Group) has developed compression systems used for video data. FLAC stands for Free Lossless Audio Codec."
-img: "/images/mp3-vs-flac/thumb.jpg"
+desc: 'MPEG (The Moving Picture Experts Group) has developed compression systems used for video data. FLAC stands for Free Lossless Audio Codec.'
+img: '/images/mp3-vs-flac/thumb.jpg'
 imgWidth: 800
 imgHeight: 500
 tags:
   - licit-guides
 ---
 
-## What Is MP3?
+## What is MP3?
 
 MPEG (The Moving Picture Experts Group) has developed compression systems used for video data. For example, DVD movies, HDTV broadcasts and DSS satellite systems use MPEG compression to fit video and movie data into smaller spaces. The MPEG compression system includes a subsystem to compress sound, called MPEG Audio Layer-3. We know it by its abbreviation, MP3. MP3 can compress a song by a factor of 10 or 12 and still retain something close to CD quality. So, a 30-megabyte sound file from a CD reduces to 3 megabytes or so in MP3. When you download the MP3 file and play it, it sounds almost as good as the original file.
 
-## What Is FLAC?
+## What is FLAC?
 
 FLAC stands for Free Lossless Audio Codec. Let’s start with the “free” part of this name: FLAC operates with royalty-free licensing and an open format. FLAC files are only about 50% smaller than their CD equivalents, they are able to do something quite amazing: Decompress to the same quality as the original. So, a 30 MB file would be 15 MB when stored in the FLAC format but would have a quality equal to the original. By using a different compression technique that does not involve psychoacoustics, FLAC is able to avoid permanently “throwing out” any of the audio data. This is why it is known as a lossless format. Instead, the FLAC algorithm employs linear prediction which reduces the truly redundant information in the song. In terms of the listening experience, this means that a song’s full dynamic range is preserved. Sudden increases in sound levels, known as transients, are also retained. Cymbals and snare drums are crisp. The extra clarity of tone is also due to the absence of sonic artifacts – a problem with lossy files. Artifacts are formed when compression has not retained enough data to reproduce the original file when it is decompressed. This can manifest as ringing and hissing noises or graininess in the audio.
 
-## Why MP3 & Why FLAC.
+## Why MP3 & why FLAC.
 
 MP3 is a lossy format, which means parts of the music are shaved off to reduce the file size to a more compact level. It is supposed to use "psychoacoustics" to delete overlapping sounds, but it isn't always successful. Typically, cymbals, reverb and guitars are the sounds most affected by MP3 compression and can sound really distorted or "crunchy" when too much compression is applied.
 
