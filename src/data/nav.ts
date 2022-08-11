@@ -1,4 +1,4 @@
-export const nav = [
+export const navContents = [
   {
     title: 'About',
     slug: '/about',
@@ -6,5 +6,5 @@ export const nav = [
   {
     title: 'Donate',
     slug: 'https://www.buymeacoffee.com/morrismotel',
-  }
-]
+  },
+];

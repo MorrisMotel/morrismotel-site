@@ -1,26 +1,23 @@
 ---
-import "../../style/tailwind.css"
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
-import ThemeChange from "@components/ThemeChange";
-import Head from '@components/Head'
+import '../../style/tailwind.css';
+import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
+import Head from '@components/Head';
 const content = Astro.props;
 ---
 
 <html lang="en">
+  <Head title={content?.title} desc={content?.desc} img={content?.img} />
 
-<Head title={content?.title} desc={content?.desc} img={content?.img} />
-
-<body class="flex flex-col items-center bg-white dark:bg-black text-black dark:text-white">
-	<div class="w-full max-w-6xl flex-grow">
-		<Navbar>
-			<ThemeChange />
-		</Navbar>
-		<div class="p-4 pb-10">
-			<slot />
-		</div>
-	</div>
-</body>
-<Footer />
-
+  <body
+    class="flex flex-col items-center bg-white dark:bg-black text-black dark:text-white"
+  >
+    <div class="w-full max-w-6xl flex-grow">
+      <Navbar client:visible />
+      <div class="p-4 pb-10">
+        <slot />
+      </div>
+    </div>
+  </body>
+  <Footer />
 </html>
