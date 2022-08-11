@@ -1,13 +1,13 @@
 ---
 layout: ../../components/layouts/post.astro
-title: "Servarr Setup Pt. 3b: Prowlarr/Sonarr/Radarr"
+title: 'Servarr Setup Pt. 3b: Prowlarr, Sonarr, and Radarr'
 slug: servarr-guide-pt3b
 date: 2022-03-05
 author: MrMeatBones
 desc: "Now that you've decided which indexers to use, Its time to start putting those decisions to use. In this section we're going to set up three programs; Sonarr, Radarr and Prowlarr."
 tags:
   - servarr
-img: "/images/servarr-guide-pt3b/thumb.jpg"
+img: '/images/servarr-guide-pt3b/thumb.jpg'
 ---
 
 Now that you've decided which indexers to use, Its time to start putting those decisions to use. In this section we're going to set up three programs; Sonarr, Radarr and Prowlarr. Sonarr and Radarr are DVR programs, and Prowlarr is an indexer aggregate. Basically, Sonarr and Radarr will facilitate the acquisition of your media, and Prowlarr will be where you feed them your indexers. Let's get started.
