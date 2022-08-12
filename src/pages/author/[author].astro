@@ -1,40 +1,51 @@
 ---
-import BaseLayout from "../../components/layouts/baselayout.astro";
+import BaseLayout from '../../components/layouts/baselayout.astro';
 import Article from '../../components/article.astro';
 import authorData from '../../data/authors/authors.json';
-import { getAllPosts } from "src/lib/posts";
+import { getAllPosts } from 'src/lib/posts';
 
 export async function getStaticPaths() {
-    const allPosts = await Promise.all(await getAllPosts())
-    let allAuthorsUnique = [...new Set(allPosts.map((p) => p.author))];
-    return allAuthorsUnique.map((author) => ({
-        params: {
-            author
-        },
-        props: {
-            allPosts
-        }
-    }));
+  const allPosts = await Promise.all(await getAllPosts());
+  let allAuthorsUnique = [...new Set(allPosts.map((p) => p.author))];
+  return allAuthorsUnique.map((author) => ({
+    params: {
+      author,
+    },
+    props: {
+      allPosts,
+    },
+  }));
 }
 
-const allPosts = await Promise.all(await getAllPosts())
+const allPosts = await Promise.all(await getAllPosts());
 const title = 'Morris Motel';
 const description = 'Sail the high seas';
 
-const posts = allPosts.filter((post) => post.author === Astro.params.author).sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+const posts = allPosts
+  .filter((post) => post.author === Astro.params.author)
+  .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 const author = authorData[posts[0].author];
 ---
 
-<BaseLayout title={`Author - ${author?.name}`} description={`Author page for ${author?.name}`} image={author.image}
-    post={false}>
-    <div class="grid place-items-center">
-        <img class="w-24 h-24 rounded-full ring ring-current" src={author.image} alt="" />
-        <h1 class="text-4xl mt-2">Posts by {author.name ? author.name : "Unknown"}</h1>
+<BaseLayout
+  title={`Author - ${author?.name}`}
+  description={`Author page for ${author?.name}`}
+  image={author.image}
+  post={false}
+>
+  <div class="grid place-items-center">
+    <img
+      class="w-24 h-24 rounded-full ring ring-current"
+      src={author.image}
+      alt=""
+    />
+    <h1 class="text-4xl mt-2 leading-[0.85] text-center">
+      Posts by {author.name ? author.name : 'Unknown'}
+    </h1>
+  </div>
+  <div class="container md:mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 gap-y-5 mt-10">
+      {posts.map((post) => <Article post={post} />)}
     </div>
-    <div class="container md:mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 gap-y-5 mt-10">
-            {posts.map((post) =>
-            <Article post={post} />)}
-        </div>
-    </div>
+  </div>
 </BaseLayout>
