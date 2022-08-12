@@ -1,12 +1,10 @@
 ---
 import { dateFilter } from '../lib/dateFilter.js';
 const post = Astro.props.post;
-const slug = post?.slug || post?.frontmatter?.slug;
-const slugUrl = `/posts/${slug}`;
-const title = post?.title || post?.frontmatter?.title;
-const imgUrl = (post?.img || post?.frontmatter?.img) ?? '/images/fallback.png';
-const date = dateFilter(post?.date || post?.frontmatter?.date);
-const readTime = post?.minutesRead || post?.frontmatter?.minutesRead;
+const { slug, title, minutesRead } = post;
+const slugUrl = '/posts/' + slug;
+const imgUrl = post?.img ?? '/images/fallback.png';
+const date = dateFilter(post?.date);
 ---
 
 <article class="group flex justify-between group md:flex-col-reverse">
@@ -41,7 +39,7 @@ const readTime = post?.minutesRead || post?.frontmatter?.minutesRead;
           >
           </path>
         </svg>
-        {readTime}
+        {minutesRead}
       </p>
     </div>
   </div>
