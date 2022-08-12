@@ -61,6 +61,7 @@ const author = authorData[post.content.author];
       </article>
     </div>
 
+    <h2 class="text-3xl mb-2 font-[500]">About the author:</h2>
     <a
       class="w-64 md:w-full flex flex-col items-center bg-neutral-300 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl"
     >
@@ -70,9 +71,9 @@ const author = authorData[post.content.author];
         alt={`${author.name}'s profile image'`}
       />
       <div class="flex flex-col justify-between p-4 leading-normal">
-        <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">
+        <!-- <p class="text-neutral-600 dark:text-neutral-400 text-xs font-bold">
           ABOUT THE AUTHOR
-        </p>
+        </p> -->
         <h5
           class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium mb-2 mt-1"
         >
@@ -87,6 +88,8 @@ const author = authorData[post.content.author];
     </a>
   </section>
 
+  <!-- A comments system powered by GitHub Discussions: https://giscus.app -->
+  <h2 class="text-3xl mb-2 font-[500]">Leave a comment:</h2>
   <script
     src="https://giscus.app/client.js"
     data-repo="caincodes/morrismotel-site"
@@ -107,15 +110,6 @@ const author = authorData[post.content.author];
 
   </script>
 
-  <!-- <div id="hyvor-talk-view"></div>
-  <script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = 6489;
-    var HYVOR_TALK_CONFIG = {
-      url: false,
-      id: 6489,
-    };
-    </script>
-  <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js" /> -->
   <div class="mt-10">
     <RelatedArticles {post} />
   </div>
