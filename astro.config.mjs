@@ -5,7 +5,7 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
   markdown: {
-    remarkPlugins: { extends: [remarkReadingTime] },
+    remarkPlugins: ['remark-gfm', 'remark-smartypants', remarkReadingTime],
   },
   site: 'http://localhost:3000/',
   integrations: [sitemap(), tailwind()],
