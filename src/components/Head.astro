@@ -1,8 +1,9 @@
 ---
 const siteInfo = {
-	siteName: 'Morris Motel',
-	siteDesc: 'Sail the Seven Seas',
-}
+  siteName: 'Morris Motel',
+  siteDesc:
+    'Your one stop shop for all things about sailing the high seas. From quick guides on music acquisition to full servarr setups, we have you covered.',
+};
 
 const content = Astro.props;
 let title = content?.title;
@@ -10,47 +11,73 @@ let desc = content?.desc;
 let img = content?.img;
 let twitterUsername = content?.twitterUsername;
 
-if (!title) title = siteInfo.siteName
-if (!desc) desc = siteInfo.siteDesc
-if (!img) img = Astro.site + 'card.png'
+if (!title) title = siteInfo.siteName;
+if (!desc) desc = siteInfo.siteDesc;
+if (!img) img = Astro.site + 'card.png';
 ---
 
 <head>
-	<!-- essential -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
+  <!-- essential -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
 
-	<!-- core -->
-	{title && <title>{title}</title>}
-	{desc && <meta name="description" content={desc}/>}
+  <!-- core -->
+  {title && <title>{title}</title>}
+  {desc && <meta name="description" content={desc} />}
 
-	<!-- twitter -->
-	{title && <meta name="twitter:title" content={title} />}
-	{desc && <meta name="twitter:description" content={desc} />}
-	{title && <meta name="twitter:image:alt" content={title} />}
-	{twitterUsername && <meta name="twitter:site" content={twitterUsername} />}
-	{twitterUsername && <meta name="twitter:creator" content={twitterUsername} />}
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:image" content={img} />
+  <!-- twitter -->
+  {title && <meta name="twitter:title" content={title} />}
+  {desc && <meta name="twitter:description" content={desc} />}
+  {title && <meta name="twitter:image:alt" content={title} />}
+  {twitterUsername && <meta name="twitter:site" content={twitterUsername} />}
+  {twitterUsername && <meta name="twitter:creator" content={twitterUsername} />}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={img} />
 
-	<!-- og -->
-	{title && <meta property="og:site_name" content={title} />}
-	{title && <meta property="og:image:alt" content={title} />}
-	{title && <meta property="og:title" content={title} />}
-	{desc && <meta property="og:description" content={desc} />}
-	<meta property="og:image" content={img} />
-	<meta property="og:type" content="object" />
-	<meta property="og:url" content={Astro.site} />
+  <!-- og -->
+  {title && <meta property="og:site_name" content={title} />}
+  {title && <meta property="og:image:alt" content={title} />}
+  {title && <meta property="og:title" content={title} />}
+  {desc && <meta property="og:description" content={desc} />}
+  <meta property="og:image" content={img} />
+  <meta property="og:type" content="object" />
+  <meta property="og:url" content={Astro.site} />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-	<link rel="manifest" href="/favicons/site.webmanifest">
-	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fff">
-	<meta name="msapplication-TileColor" content="#fff">
-	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
-	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+  <!-- favicons & things -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/favicons/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicons/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicons/favicon-16x16.png"
+  />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fefefe"
+  />
+  <meta name="msapplication-TileColor" content="#fefefe" />
+  <meta
+    name="theme-color"
+    content="#010101"
+    media="(prefers-color-scheme: dark)"
+  />
+  <meta
+    name="theme-color"
+    content="#fefefe"
+    media="(prefers-color-scheme: light)"
+  />
 
-	<!-- analytics script -->
-	<script async defer src="https://nullitics.com/script.js"/>
+  <!-- analytics script -->
+  <script async defer src="https://nullitics.com/script.js">
+
+  </script>
 </head>
