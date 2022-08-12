@@ -12,7 +12,6 @@ let img = content.img;
 
 if (!title) title = siteInfo.siteName;
 if (!desc) desc = siteInfo.siteDesc;
-if (!img) img = Astro.site + 'card.png';
 ---
 
 <head>
@@ -29,14 +28,14 @@ if (!img) img = Astro.site + 'card.png';
   {desc && <meta name="twitter:description" content={desc} />}
   {title && <meta name="twitter:image:alt" content={title} />}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={img} />
+  {img && <meta name="twitter:image" content={img} />}
 
   <!-- og -->
   {title && <meta property="og:site_name" content={title} />}
   {title && <meta property="og:image:alt" content={title} />}
   {title && <meta property="og:title" content={title} />}
   {desc && <meta property="og:description" content={desc} />}
-  <meta property="og:image" content={img} />
+  {img && <meta property="og:image" content={img} />}
   <meta property="og:type" content="object" />
   <meta property="og:url" content={Astro.site} />
 
