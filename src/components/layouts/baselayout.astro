@@ -7,7 +7,7 @@ const content = Astro.props;
 ---
 
 <html lang="en">
-  <Head title={content?.title} desc={content?.desc} img={content?.img} />
+  <Head />
 
   <body
     class="flex flex-col items-center bg-white dark:bg-black text-black dark:text-white"
@@ -18,6 +18,6 @@ const content = Astro.props;
         <slot />
       </div>
     </div>
+    <Footer />
   </body>
-  <Footer />
 </html>

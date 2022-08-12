@@ -6,10 +6,9 @@ const siteInfo = {
 };
 
 const content = Astro.props;
-let title = content?.title;
-let desc = content?.desc;
-let img = content?.img;
-let twitterUsername = content?.twitterUsername;
+let title = content.title;
+let desc = content.desc;
+let img = content.img;
 
 if (!title) title = siteInfo.siteName;
 if (!desc) desc = siteInfo.siteDesc;
@@ -29,8 +28,6 @@ if (!img) img = Astro.site + 'card.png';
   {title && <meta name="twitter:title" content={title} />}
   {desc && <meta name="twitter:description" content={desc} />}
   {title && <meta name="twitter:image:alt" content={title} />}
-  {twitterUsername && <meta name="twitter:site" content={twitterUsername} />}
-  {twitterUsername && <meta name="twitter:creator" content={twitterUsername} />}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content={img} />
 
