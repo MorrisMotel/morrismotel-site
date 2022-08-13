@@ -6,11 +6,11 @@ const siteInfo = {
 };
 
 const content = Astro.props;
-let title = content.title;
-let desc = content.desc;
+let title = content.title ? content.title : siteInfo.siteName;
+let desc = content.desc ? content.desc : siteInfo.siteDesc;
 let img = content.img;
 
-if (!title) title = siteInfo.siteName;
+
 if (!desc) desc = siteInfo.siteDesc;
 ---
 
@@ -31,7 +31,7 @@ if (!desc) desc = siteInfo.siteDesc;
   {img && <meta name="twitter:image" content={img} />}
 
   <!-- og -->
-  {title && <meta property="og:site_name" content={title} />}
+  {content.title && <meta property="og:site_name" content={title} />}
   {title && <meta property="og:image:alt" content={title} />}
   {title && <meta property="og:title" content={title} />}
   {desc && <meta property="og:description" content={desc} />}
