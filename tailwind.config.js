@@ -8,6 +8,10 @@ module.exports = {
         sans: ['Space Grotesk', 'sans-serif', ...defaultTheme.fontFamily.sans],
         mono: ['Space Mono', 'monospaced', ...defaultTheme.fontFamily.mono],
       },
+      lineHeight: {
+        'headline': '0.85',
+        'description': '1.15rem',
+      }
     },
     fontSize: {
       xs: '.75rem',
