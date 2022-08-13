@@ -19,10 +19,14 @@ const latestPost = sortedPosts[0];
   >
     <div class="text-center text-neutral-content mt-5 md:mt-0 -mb-2 md:mb-0">
       <div class="max-w-lg">
-        <h1 class="mx-3 md:mx-0 mb-2 text-4xl font-bold uppercase leading-[0.85] text-white">
+        <h1
+          class="mx-3 md:mx-0 mb-2 text-4xl font-bold uppercase leading-headline text-white"
+        >
           <a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a>
         </h1>
-        <p class="mx-3 md:mx-0 leading-[1.15rem] md:leading-normal">{latestPost.desc}</p>
+        <p class="mx-3 md:mx-0 leading-description md:leading-normal">
+          {latestPost.desc}
+        </p>
         <h5 class="mb-4 mt-2">MOST RECENT ARTICLE</h5>
         <button
           type="button"
@@ -33,7 +37,7 @@ const latestPost = sortedPosts[0];
     </div>
   </div>
   <div class="mb-10">
-    <h2 class="text-3xl mb-2 font-[500]">Latest Articles:</h2>
+    <h2 class="text-3xl mb-2 font-medium">Latest Articles:</h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
       {sortedPosts.slice(1, 5).map((p) => <Article post={p} />)}
     </div>
