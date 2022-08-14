@@ -5,22 +5,18 @@ const collected = ['URL', 'Time', 'Referrer URL', 'Country', 'Device (mobile/des
 
 <Page title="Privacy Policy">
 	<p>Like any good motel, here at Morris Motel, discretion is our middle name. We believe privacy is a fundamental human right. We also believe privacy policies shouldn't require a team of lawyers to decipher, so here's how we operate:</p>
-	<p>We do not host advertisements. We do not use cookies. We do not store IP addresses. We do collect some privacy-friendly analytics.</p>
+	<p>We do not host advertisements. We do not use cookies. All external scripts added to our site are privacy-friendly and open source. We <strong>do</strong> collect some privacy-friendly analytics.</p>
 	<p>For analytics, we use a very lightweight, <a href="https://github.com/nullitics/nullitics">open-source</a>,
 		privacy-respecting analytics service called <a href="https://nullitics.com">Nullitics</a>. It creates a 300-byte
 		GIF to collect these analytics. It collects the bare
-		minimum for analytics and does not track you, use cookies, or store User-Agent strings. Our analytics are
-		compliant with GDPR, ePrivacy, PECR, CCPA, and COPPA laws. We collect the following:</p>
+		minimum for analytics and does not track you, use cookies, or store User-Agent strings. We collect the following:</p>
 	<ul>
 		{collected.map(item => <li class="my-0">{item}</li> )}
 	</ul>
-	<p>We use this information to gauge
-		how people interact with the site, and to improve the site. We don't have any information that advertisers would
-		want (as we don't collect anything personally identifiable), but regardless, we do not share this data with any
-		third parties.</p>
+	<p>We use this information to gauge how people interact with the site, and to improve the site. We don't have any information that advertisers would want (as we don't collect anything personally identifiable), but regardless, we do not share this data with any third parties.</p>
+	<p>For our comment sections, we use an open-source system called <a href="https://giscus.app/">Giscus</a>, which utilizes GitHub Discussions. You can find their source code <a href="https://github.com/giscus/giscus">here</a>.</p>
 	<p>If you choose to fill out a
-		contact form to reach us, the only information sent to us is the contents of the form. Forms are created using <a href="https://tally.so/">Tally</a>, and are private. Time-sensitive forms are also forwarded to our email box to ensure
-		that we are notified immediately.</p>
-		<p>Our website is also fully open-source, so you can view the source code anytime. We're also hosted using Vercel with Git integration, so any changes pushed to our code repository takes immediate effect on the site. <a href="https://gitlab.com/morrismotel/morrismotel-site">You can view the source code here.</a></p>
+		contact form to reach us, the only information sent to us is the contents of the form. Forms are created using <a href="https://tally.so/">Tally</a>, and are private. Tally is not open-source however, so we are not in control of the data that is collected by Tally. We are currently looking into open-source alternatives. Time-sensitive forms are also forwarded to our email box to ensure that we are notified immediately.</p>
+		<p>Our website is also fully open-source, so you can view the source code anytime. We're also hosted using Vercel with Git integration, so any changes pushed to our code repository takes immediate effect on the site. <em>Translation: we don't modify the source code between our repository and our hosting service. </em><a href="https://gitlab.com/morrismotel/morrismotel-site">You can find the source code here.</a></p>
 	<p>If you have any questions, feel free to send us an email at <a>contact@morrismotel.com</a>.</p>
 </Page>
