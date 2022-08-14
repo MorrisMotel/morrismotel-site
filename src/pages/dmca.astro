@@ -1,0 +1,152 @@
+---
+import BaseLayout from '@layouts/baselayout';
+const webhookUrl =
+  'https://discord.com/api/webhooks/1008259864407068712/KYfmilGh1b9YzUi1orewK7s5nbgH2oSN9vt9b5LAOoHNnra-qup_ROJIFXGACfEcUCcZ';
+function sendMessage() {
+  var request = new XMLHttpRequest();
+  request.open('POST', webhookUrl);
+
+  request.setRequestHeader('Content-type', 'application/json');
+
+  var params = {
+    username: 'sent from morrismotel.com',
+    avatar_url: 'https://morrismotel.vercel.app/images/logo.png',
+    content: 'Discord message',
+  };
+
+  request.send(JSON.stringify(params));
+}
+---
+
+<BaseLayout title="DMCA">
+  <section class="bg-gray-100 dark:bg-transparent">
+    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+        <div class="lg:py-12 lg:col-span-2">
+          <h1 class="text-6xl font-bold">DMCA</h1>
+          <p class="max-w-xl text-lg mb-3">
+            Please note that we do not host any content ourselves. If we link to
+            any website which violates copyright, contact the owner of the site
+            in complaint.
+          </p>
+          <p class="max-w-xl text-lg mb-3">
+            By submitting the request, you agree that you are providing this
+            notice in good faith and with the reasonable belief that use of the
+            material in the manner complained of is not authorized by the
+            copyright owner, its agent, or the law; and under penalty of
+            perjury, you certify that the information contained in the
+            notification is both true and accurate, and you are authorized to
+            act on behalf of the owner of the copyright(s) involved.
+          </p>
+          <p class="max-w-xl text-lg text-red-500">
+            This form is in development. For now, use our
+            <a class="underline" href="https://tally.so/r/nPdGW5"
+              >third party form.
+            </a>
+          </p>
+        </div>
+
+        <div
+          class="md:p-8 bg-white dark:bg-transparent md:dark:border-white md:dark:border-2 rounded-lg shadow-lg lg:p-12 lg:col-span-3"
+        >
+          <form
+            action={webhookUrl}
+            method="POST"
+            enctype="application/json"
+            class="space-y-4"
+          >
+            <div>
+              <label for="name">Full name</label>
+              <input
+                class="w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                placeholder="Chris P. Bacon"
+                type="text"
+                id="name"
+              />
+            </div>
+
+            <div>
+              <div>
+                <label for="company">Who do you represent?</label>
+                <input
+                  class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                  placeholder="Copyright Troll, LLC"
+                  type="text"
+                  id="company"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label for="infringing-url"
+                  >What URL contains the infringing content?
+                </label>
+                <input
+                  class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                  placeholder="https://morrismotel.com/posts/..."
+                  type="text"
+                  id="infringing-url"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label for="original-url"
+                  >Where can the original be found?
+                </label>
+                <input
+                  class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                  placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  type="text"
+                  id="original-url"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="contact">How can we contact you?</label>
+              <textarea
+                class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                placeholder="Phone number, email, etc."
+                rows="2"
+                id="contact"></textarea>
+            </div>
+
+            <div>
+              <label for="message">Describe the copyright violation.</label>
+              <textarea
+                class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
+                placeholder="Message"
+                rows="4"
+                id="message"></textarea>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                onclick="sendMessage()"
+                class="mt-4 inline-flex items-center justify-center w-full px-5 py-3 dark:text-white dark:bg-black rounded-lg sm:w-auto dark:border-white border-black border-2"
+              >
+                <span class="font-medium">Send Request</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 ml-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
