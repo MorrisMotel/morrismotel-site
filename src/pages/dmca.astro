@@ -1,25 +1,9 @@
 ---
 import BaseLayout from '@layouts/baselayout';
-const webhookUrl =
-  'https://discord.com/api/webhooks/1008259864407068712/KYfmilGh1b9YzUi1orewK7s5nbgH2oSN9vt9b5LAOoHNnra-qup_ROJIFXGACfEcUCcZ';
-function sendMessage() {
-  var request = new XMLHttpRequest();
-  request.open('POST', webhookUrl);
-
-  request.setRequestHeader('Content-type', 'application/json');
-
-  var params = {
-    username: 'sent from morrismotel.com',
-    avatar_url: 'https://morrismotel.vercel.app/images/logo.png',
-    content: 'Discord message',
-  };
-
-  request.send(JSON.stringify(params));
-}
 ---
 
 <BaseLayout title="DMCA">
-  <section class="bg-gray-100 dark:bg-transparent">
+  <section class="bg-transparent">
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
         <div class="lg:py-12 lg:col-span-2">
@@ -47,14 +31,9 @@ function sendMessage() {
         </div>
 
         <div
-          class="md:p-8 bg-white dark:bg-transparent md:dark:border-white md:dark:border-2 rounded-lg shadow-lg lg:p-12 lg:col-span-3"
+          class="md:p-8 bg-transparent md:dark:border-white md:dark:border-2 rounded-2xl shadow-2xl lg:p-12 lg:col-span-3"
         >
-          <form
-            action={webhookUrl}
-            method="POST"
-            enctype="application/json"
-            class="space-y-4"
-          >
+          <form>
             <div>
               <label for="name">Full name</label>
               <input
@@ -62,6 +41,9 @@ function sendMessage() {
                 placeholder="Chris P. Bacon"
                 type="text"
                 id="name"
+                name="What is your full name?"
+                maxlength="1024"
+                required
               />
             </div>
 
@@ -73,6 +55,9 @@ function sendMessage() {
                   placeholder="Copyright Troll, LLC"
                   type="text"
                   id="company"
+                  name="Who do you represent?"
+                  maxlength="1024"
+                  required
                 />
               </div>
             </div>
@@ -84,8 +69,11 @@ function sendMessage() {
                 <input
                   class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
                   placeholder="https://morrismotel.com/posts/..."
-                  type="text"
+                  type="url"
                   id="infringing-url"
+                  name="What URL contains the infringing content?"
+                  maxlength="1024"
+                  required
                 />
               </div>
             </div>
@@ -97,8 +85,11 @@ function sendMessage() {
                 <input
                   class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
                   placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  type="text"
+                  type="url"
                   id="original-url"
+                  name="Where can the original be found?"
+                  maxlength="1024"
+                  required
                 />
               </div>
             </div>
@@ -109,7 +100,12 @@ function sendMessage() {
                 class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
                 placeholder="Phone number, email, etc."
                 rows="2"
-                id="contact"></textarea>
+                id="contact"
+                name="How can we contact you?"
+                maxlength="1024"
+                required
+              >
+              </textarea>
             </div>
 
             <div>
@@ -118,13 +114,15 @@ function sendMessage() {
                 class="mt-1 w-full p-3 text-sm border-gray-200 rounded-lg dark:bg-black"
                 placeholder="Message"
                 rows="4"
-                id="message"></textarea>
+                id="message"
+                name="Describe the copyright violation."
+                maxlength="1024"
+                required></textarea>
             </div>
 
             <div>
               <button
                 type="submit"
-                onclick="sendMessage()"
                 class="mt-4 inline-flex items-center justify-center w-full px-5 py-3 dark:text-white dark:bg-black rounded-lg sm:w-auto dark:border-white border-black border-2"
               >
                 <span class="font-medium">Send Request</span>
@@ -149,4 +147,38 @@ function sendMessage() {
       </div>
     </div>
   </section>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const formJSON = Object.fromEntries(data.entries());
+      let embedJSON = { title: 'DMCA Request', fields: [] };
+      Object.entries(formJSON).map(async ([key, value]) => {
+        await embedJSON.fields.push({ name: key, value: value });
+      });
+
+      embedJSON.fields.map((field) => {
+        if (field.value.length < 25) field.inline = true;
+      });
+
+      var request = new XMLHttpRequest();
+      request.open(
+        'POST',
+        'https://discord.com/api/webhooks/1008259864407068712/KYfmilGh1b9YzUi1orewK7s5nbgH2oSN9vt9b5LAOoHNnra-qup_ROJIFXGACfEcUCcZ',
+      );
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: 'Morris Motel',
+        avatar_url: 'https://morrismotel.vercel.app/images/logo.png',
+        embeds: [embedJSON],
+      };
+
+      request.send(JSON.stringify(params));
+    }
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleFormSubmit);
+  </script>
 </BaseLayout>
