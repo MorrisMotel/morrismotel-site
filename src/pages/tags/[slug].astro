@@ -21,11 +21,7 @@ const tag = Astro.params.slug;
 const postsForTag = Astro.props.postsForTag;
 ---
 
-<BaseLayout
-  title={'#' + tag}
-  description={`Posts tagged with #${tag}`}
-  post={false}
->
+<BaseLayout title={'#' + tag} description={`Posts tagged with #${tag}`}>
   <h1
     class="mb-4 text-3xl sm:text-4xl font-extrabold place-items-center text-center"
     color="currentColor"
