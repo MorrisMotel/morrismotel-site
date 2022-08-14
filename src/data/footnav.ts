@@ -9,7 +9,7 @@ export const footNavContents = [
   },
   {
     title: 'DMCA',
-    slug: 'https://tally.so/r/nPdGW5',
+    slug: '/dmca',
   },
   {
     title: 'Discord',
