@@ -7,6 +7,8 @@ import authorData from '../../data/authors/authors.json';
 const post = Astro.props;
 const frontmatter = post.frontmatter;
 const author = authorData[frontmatter.author];
+
+import 'giscus';
 ---
 
 <BaseLayout
@@ -96,25 +98,25 @@ const author = authorData[frontmatter.author];
   <h2 class="text-3xl mb-2 font-medium leading-headline mt-10">
     Leave a comment:
   </h2>
-  <script
+  <giscus-widget
+  id="comments"
     src="https://giscus.app/client.js"
-    data-repo="MorrisMotel/morrismotel-site"
-    data-repo-id="R_kgDOHzpuiQ"
-    data-category="Comments"
-    data-category-id="DIC_kwDOHzpuic4CQwyH"
-    data-mapping="title"
-    data-strict="1"
-    data-reactions-enabled="0"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="https://raw.githubusercontent.com/MorrisMotel/morrismotel-site/main/src/style/giscus.css"
-    data-lang="en"
-    data-loading="lazy"
+    repo="MorrisMotel/morrismotel-site"
+    repo-id="R_kgDOHzpuiQ"
+    category="Comments"
+    category-id="DIC_kwDOHzpuic4CQwyH"
+    mapping="title"
+    strict="1"
+    reactions-enabled="0"
+    emit-metadata="0"
+    input-position="top"
+    theme="https://raw.githubusercontent.com/MorrisMotel/morrismotel-site/main/src/style/giscus.css"
+    lang="en"
+    loading="lazy"
     crossorigin="anonymous"
     async
   >
-
-  </script>
+  </giscus-widget>
 
   <div class="mt-12">
     <h2 class="text-3xl mb-2 font-medium leading-headline">
