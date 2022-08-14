@@ -10,10 +10,9 @@ const author = authorData[frontmatter.author];
 ---
 
 <BaseLayout
-  title={frontmatter.title}
+  title={`${frontmatter.title} by ${author.name}`}
   description={frontmatter.desc}
   image={frontmatter.img}
-  post={true}
 >
   <div
     class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
@@ -63,6 +62,7 @@ const author = authorData[frontmatter.author];
     <div class="container">
       <article class="prose dark:prose-invert !max-w-full">
         <slot />
+        <hr class="my-10" />
       </article>
     </div>
 
@@ -93,7 +93,7 @@ const author = authorData[frontmatter.author];
   </section>
 
   <!-- A comments system powered by GitHub Discussions: https://giscus.app -->
-  <h2 class="text-3xl mb-2 font-medium leading-headline mt-10">
+  <h2 class="text-3xl mb-4 font-medium leading-headline mt-10">
     Leave a comment:
   </h2>
   <script
