@@ -7,9 +7,8 @@ const siteInfo = {
 
 const content = Astro.props;
 let title = content.title ? content.title : siteInfo.siteName;
-let desc = content.desc ? content.desc : siteInfo.siteDesc;
-let img = content.img;
-
+let desc = content.description ? content.description : siteInfo.siteDesc;
+let img = content.image ? content.image : '/images/logo.png';
 
 if (!desc) desc = siteInfo.siteDesc;
 ---
