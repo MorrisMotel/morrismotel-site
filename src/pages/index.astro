@@ -13,27 +13,25 @@ const latestPost = sortedPosts[0];
 
 <BaseLayout>
   <div
-    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center"
+    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
     style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${latestPost.img}');
     background-repeat: no-repeat; background-position: center center; background-size: cover;`}
   >
     <div class="text-center text-neutral-content mt-5 md:mt-0 -mb-2 md:mb-0">
-      <div class="max-w-lg">
-        <h1
-          class="mx-3 md:mx-0 mb-2 text-4xl font-bold uppercase leading-headline text-white"
-        >
-          <a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a>
-        </h1>
-        <p class="mx-3 md:mx-0 leading-description md:leading-normal">
-          {latestPost.desc}
-        </p>
-        <h5 class="mb-4 mt-2">MOST RECENT ARTICLE</h5>
-        <button
-          type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-8 md:mb-0"
-          ><a href={`/posts/${latestPost.slug}`}>Read</a>
-        </button>
-      </div>
+      <h1
+        class="mx-3 md:mx-0 mb-3 text-4xl font-bold uppercase leading-headline text-white"
+      >
+        <a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a>
+      </h1>
+      <p class="mx-auto leading-description md:leading-normal mb-3 max-w-lg">
+        {latestPost.desc}
+      </p>
+      <h5 class="mb-4">MOST RECENT ARTICLE</h5>
+      <button
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-8 md:mb-0"
+        ><a href={`/posts/${latestPost.slug}`}>Read</a>
+      </button>
     </div>
   </div>
   <div class="mb-10">
