@@ -17,7 +17,7 @@ JDownloader2 (JD2) is a very common method for DDLing from a variety of sites, e
 
 ## Installing JDownloader2
 
-Of course you must have JDownloader2 installed already, and you can get it from [https://jdownloader.org/jdownloader2](https://jdownloader.org/jdownloader2). Click on your operating system and go through the usual steps of installing the program.
+Of course you must have JDownloader2 installed already, and you can get it from [jdownloader.org](https://jdownloader.org/jdownloader2). Click on your operating system and go through the usual steps of installing the program.
 
 ## De-bloating
 
