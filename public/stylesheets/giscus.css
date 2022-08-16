@@ -207,3 +207,7 @@ main .gsc-loading-image {
     background-position: 2% 0%;
   }
 }
+
+.gsc-comment-box-markdown-hint {
+  visibility: hidden;
+}
