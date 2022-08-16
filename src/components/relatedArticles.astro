@@ -1,5 +1,5 @@
 ---
-import Article from '../components/article.astro';
+import Article from './article.astro';
 import { getAllPosts } from 'src/lib/posts';
 const post = Astro.props.post;
 const posts = await Promise.all(await getAllPosts());

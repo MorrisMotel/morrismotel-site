@@ -3,10 +3,19 @@ import BaseLayout from './baselayout.astro';
 import RelatedArticles from '../relatedArticles.astro';
 import { dateFilter } from '../../lib/dateFilter.js';
 import authorData from '../../data/authors/authors.json';
+import { Image } from '@astrojs/image/components';
 
 const post = Astro.props;
 const frontmatter = post.frontmatter;
 const author = authorData[frontmatter.author];
+
+import { getImage } from '@astrojs/image';
+
+const heroImg = await getImage({
+  src: import('../..' + (frontmatter.img ?? '/images/fallback.png')),
+  height: 350,
+  aspectRatio: 3.5,
+});
 ---
 
 <BaseLayout
@@ -15,8 +24,8 @@ const author = authorData[frontmatter.author];
   image={frontmatter.img}
 >
   <div
-    class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
-    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${frontmatter.img}')`}
+    class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-2"
+    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${heroImg.src}')`}
   >
     <div class="items-center">
       <h1
@@ -72,11 +81,14 @@ const author = authorData[frontmatter.author];
     <a
       class="w-fit sm:w-72 md:w-full flex flex-col items-center bg-neutral-200 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl"
     >
-      <img
+      <Image
+        src={import('../../images' + author.image)}
         class="object-cover w-min h-auto md:h-52 md:w-56 md:mr-1 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
-        src={author.image}
         alt={`${author.name}'s profile image'`}
+        width={250}
+        height={250}
       />
+
       <div class="flex flex-col justify-between leading-normal">
         <h5
           class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium ml-4 mt-1"

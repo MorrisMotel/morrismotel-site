@@ -3,6 +3,7 @@ import BaseLayout from '../../components/layouts/baselayout.astro';
 import Article from '../../components/article.astro';
 import authorData from '../../data/authors/authors.json';
 import { getAllPosts } from 'src/lib/posts';
+import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
   const allPosts = await Promise.all(await getAllPosts());
@@ -18,26 +19,23 @@ export async function getStaticPaths() {
 }
 
 const allPosts = await Promise.all(await getAllPosts());
-const title = 'Morris Motel';
-const description = 'Sail the high seas';
-
 const posts = allPosts
   .filter((post) => post.author === Astro.params.author)
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 const author = authorData[posts[0].author];
+
+const title = `Author - ${author?.name}`;
+const desc = `Author page for ${author?.name}`;
 ---
 
-<BaseLayout
-  title={`Author - ${author?.name}`}
-  description={`Author page for ${author?.name}`}
-  image={author.image}
-  post={false}
->
+<BaseLayout title={title} description={desc} image={author.image} post={false}>
   <div class="grid place-items-center">
-    <img
+    <Image
+      src={import('../../images' + author.image)}
       class="w-24 h-24 rounded-full ring ring-current"
-      src={author.image}
-      alt=""
+      alt={`${author.name}'s profile picture`}
+      width={100}
+      height={100}
     />
     <h1 class="text-4xl mt-2 leading-headline text-center">
       Posts by {author.name ? author.name : 'Unknown'}

@@ -9,12 +9,20 @@ const sortedPosts = posts.sort(
 );
 const allTags = [...new Set(posts.flatMap(({ tags }) => tags))];
 const latestPost = sortedPosts[0];
+
+import { getImage } from '@astrojs/image';
+
+const heroImg = await getImage({
+  src: import('..' + (latestPost.img ?? '/images/fallback.png')),
+  height: 350,
+  aspectRatio: 3.5,
+});
 ---
 
 <BaseLayout>
   <div
-    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
-    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${latestPost.img}');
+    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-2"
+    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${heroImg.src}');
     background-repeat: no-repeat; background-position: center center; background-size: cover;`}
   >
     <div class="text-center text-neutral-content mt-5 md:mt-0 -mb-2 md:mb-0">
