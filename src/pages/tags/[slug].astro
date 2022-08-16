@@ -23,16 +23,18 @@ const postsForTag = Astro.props.postsForTag;
 
 <BaseLayout title={'#' + tag} description={`Posts tagged with #${tag}`}>
   <h1
-    class="mb-4 text-3xl sm:text-4xl font-extrabold place-items-center text-center"
+    class="mb-4 text-3xl sm:text-4xl font-extrabold place-items-center text-center leading-headline"
     color="currentColor"
   >
-    All posts tagged with #{tag}
+    POSTS TAGGED WITH <p class="block text-blue-500">
+      #{tag}
+    </p>
   </h1>
 
   <Tags />
 
   <div class="container md:mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10 font-bold">
       {postsForTag.map((p) => <Article post={p} />)}
     </div>
   </div>
