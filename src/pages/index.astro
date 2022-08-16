@@ -31,7 +31,9 @@ const heroImg = await getImage({
       >
         <a href={`/posts/${latestPost.slug}`}>{latestPost.title}</a>
       </h1>
-      <p class="mx-auto leading-description md:leading-normal mb-3 max-w-lg">
+      <p
+        class="text-center leading-description md:leading-normal mb-3 md:max-w-lg md:mx-auto mx-3"
+      >
         {latestPost.desc}
       </p>
       <h5 class="mb-4">MOST RECENT ARTICLE</h5>
