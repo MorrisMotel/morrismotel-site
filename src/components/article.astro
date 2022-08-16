@@ -30,9 +30,11 @@ const date = dateFilter(post?.date);
         >
         </h3>
       </a>
-      <p class="flex flex-wrap items-center text-sm mt-1">
-        {date} · <Icon class="w-4 mx-1" name="academic-book" />
-        {minutesRead}
+      <p class="md:flex md:flex-wrap items-center text-sm mt-1">
+        {date}<span class="hidden md:block ml-2 mr-1">·</span><span class="flex"
+          ><Icon class="w-4 md:ml-1 mr-1" name="academic-book" />
+          {minutesRead}
+        </span>
       </p>
     </div>
   </div>
