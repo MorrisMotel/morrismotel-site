@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../components/layouts/baselayout.astro';
 import Article from '../../components/article.astro';
-import authorData from '../../data/authors/authors.json';
+import authorData from '../../data/authors.json';
 import { getAllPosts } from 'src/lib/posts';
 import { Image } from '@astrojs/image/components';
 
@@ -34,12 +34,13 @@ const desc = `Author page for ${author?.name}`;
       src={import('../../images' + author.image)}
       class="w-24 h-24 rounded-full ring ring-current"
       alt={`${author.name}'s profile picture`}
-      width={100}
-      height={100}
+      width={150}
+      height={150}
     />
     <h1 class="text-4xl mt-2 leading-headline text-center">
-      Posts by {author.name ? author.name : 'Unknown'}
+      Posts by {author.name}
     </h1>
+    <p class="mx-3 md:max-w-lg mt-4 text-center leading-tight text-base">{author?.longdesc}</p>
   </div>
   <div class="container md:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 gap-y-5 mt-10">
