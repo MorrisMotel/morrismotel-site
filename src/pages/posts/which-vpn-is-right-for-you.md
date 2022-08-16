@@ -1,26 +1,28 @@
 ---
-layout: ../../components/layouts/post.astro
-title: "Which VPN is Right for You?"
+layout: "../../components/layouts/post.astro"
+title: Which VPN is Right for You?
 slug: which-vpn-is-right-for-you
-date: 2022-02-28
+date: '2022-02-28'
 author: Cain
-desc: "Seems like everyone these days wants a VPN — whether it’s for circumventing network restrictions, hiding your internet activities from your ISP, or whatever else you might want it for."
+desc: Seems like everyone these days wants a VPN — whether it’s for circumventing
+  network restrictions, hiding your internet activities from your ISP, or whatever
+  else you might want it for.
 img: "/images/which-vpn-is-right-for-you/thumb.jpeg"
 tags:
-  - licit-guides
+- licit-guides
 ---
 
 Seems like everyone these days wants a VPN — whether it’s for circumventing network restrictions, hiding your internet activities from your ISP, or whatever else you might want it for.
 
 There’s a few things we should get out of the way first, however.
 
-First, despite what your favorite YouTuber might say, **a VPN does not protect you from most online threats**. It only reroutes your internet traffic through a server — which means you still have to trust your traffic going through said server, otherwise using a VPN will be futile.
+First, despite what your favorite YouTuber might say, **a VPN does not protect you from most online threats**. It only reroutes your internet traffic through a server — which means you still have to trust your traffic going through said server, otherwise using a VPN will be futile. It also won't protect you from cyberattacks, data breaches, or most other vulnerabilities.
 
 Second, **there is no such thing as a good free unlimited VPN**. There is always a catch. Some VPN providers might offer a free trial or half a gig of data, etc, but any VPN that offers unlimited traffic without any limitations is stealing your data and selling it online... or worse. Free VPNs have been caught injecting malware (web tracking), replacing advertisements with their own, and not actually encrypting traffic, despite their claims. 
 
-One great example of this is Betternet. Betternet has 4.5 stars on the App Store, offers unlimited free traffic, and claims to keep no logs. However, they've been caught not only logging user data, but also selling it to data brokers. They also leak IP addresses, and aren't at all transparent about their user encryption. They also offer a paid plan (like many others), which can make it difficult to distinguish the VPN scams from the legitimate VPNs. The fix is simple: do your research, and above all, pay for your VPN!
+One great example of this is Betternet. Betternet has 4.5 stars on the App Store, offers unlimited free traffic, and claims to keep no logs. However, they've been caught not only logging user data, but also selling it to data brokers. They also leak IP addresses, and aren't at all transparent about their user encryption. Their website even claims to protect you from hackers, by securing internet connection with "military-grade encryption." "Browse with confidence," they say. They also offer a paid plan for faster speeds, but don't let that trick you -- their main feature is a "totally free" VPN. 
 
-So, which VPN is best? There are a few different factors that you might want to consider. Your threat model (AKA tinfoil-hat-ness), price, speed, and locations are a few to start. We’re mainly going to be comparing NordVPN, ExpressVPN, Private Internet Access, Mullvad, Proton VPN, and IVPN, however you may see some other VPNs mentioned in this article. Please note that while IVPN provided me with a press demo, this in no way affects my review of their service. 
+So, which VPN is best? There are a few different factors that you might want to consider. Your threat model (AKA your level of tinfoil-hat), price, speed, and locations are a few to start. We’re mainly going to be comparing NordVPN, ExpressVPN, Private Internet Access, Mullvad, Proton VPN, and IVPN, however you may see some other VPNs mentioned in this article. Note that while IVPN has provided me with a press demo, this does not affect my review of their service in the slightest. 
 
 ## Threat Model
 
@@ -59,7 +61,7 @@ With Mullvad, there was a **19% download loss and a 47% upload loss.** (via PCMa
 With Proton VPN, there was a **15% download loss and a 1% upload loss** (via PCMag), and in my own testing, I had a **0% overall speed loss.**  
 With IVPN, there was a **23% download loss and a 27% upload loss** (via PCMag), and in my own testing, I had a **0% overall speed loss.**   
 
-\* My testing was done using http://ratemyvpn.org/
+\* My testing was done using [Rate My VPN](http://ratemyvpn.org/)
 
 ## Locations
 
@@ -70,7 +72,7 @@ Mullvad has **780 servers** and **68 server locations** in **38 countries**.
 Proton VPN has **1758 servers** in **63 countries**.  
 IVPN has **79 total servers** (64 openvpn, 79 wireguard) and **45 server locations** in **32 countries** on **18 different server providers**. 
 
-\* I reached out to each of these companies individually if information was unavailable, this is what I was able to retrieve.
+\* I reached out to each of these companies individually if information was unavailable. This is all the location information I was able to gather.
 
 ## Conclusion
 
@@ -78,4 +80,4 @@ The VPN you choose will probably depend on what's most important to you. Persona
 
 As a daily driver, I use Proton VPN. That being said, if you don't care too much about the number of server options, IVPN is probably your best option. IVPN is arguably the most transparent VPN provider out there, and that makes it the top choice in my opinion. (They quite literally have a blog post entitled "Why you don't need a VPN." If that's not transparency, I don't know what is.) IVPN is also completely open-source on GitHub. For these reasons, I recommend getting IVPN if you're looking for a solid VPN option. 
 
-*Updated 05/31/2022: updated Proton VPN's pricing and server count, and added IVPN.*
+*Updated 05/31/2022: updated Proton VPN's pricing/locations/name and added IVPN.*
