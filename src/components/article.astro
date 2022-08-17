@@ -4,7 +4,7 @@ import { dateFilter } from '../lib/dateFilter.js';
 const post = Astro.props.post;
 const { slug, title, minutesRead } = post;
 const slugUrl = '/posts/' + slug;
-const imgUrl = '..' + (post?.img ?? '/images/fallback.png');
+const imgUrl = post?.img ?? '/images/fallback.png';
 const date = dateFilter(post?.date);
 ---
 
