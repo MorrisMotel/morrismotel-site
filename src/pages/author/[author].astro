@@ -3,7 +3,6 @@ import BaseLayout from '../../components/layouts/baselayout.astro';
 import Article from '../../components/article.astro';
 import authorData from '../../data/authors.json';
 import { getAllPosts } from 'src/lib/posts';
-import { Image } from '@astrojs/image/components';
 
 export async function getStaticPaths() {
   const allPosts = await Promise.all(await getAllPosts());
@@ -30,12 +29,10 @@ const desc = `Author page for ${author?.name}`;
 
 <BaseLayout title={title} description={desc} image={author.image} post={false}>
   <div class="grid place-items-center">
-    <Image
-      src={import('../../images' + author.image)}
+        <img
       class="w-24 h-24 rounded-full ring ring-current"
-      alt={`${author.name}'s profile picture`}
-      width={150}
-      height={150}
+      src={author.image}
+      alt={`${author.name}'s profile picture`}""
     />
     <h1 class="text-4xl mt-2 leading-headline text-center">
       Posts by {author.name}

@@ -1,5 +1,4 @@
 ---
-import { Image } from '@astrojs/image/components';
 import { Icon } from 'astro-icon';
 import { dateFilter } from '../lib/dateFilter.js';
 const post = Astro.props.post;
@@ -15,11 +14,10 @@ const date = dateFilter(post?.date);
       href={slugUrl}
       class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1"
     >
-      <Image
-        src={import(imgUrl)}
-        alt={title}
-        width={400}
+      <img
         class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-70"
+        alt={title}
+        src={imgUrl}
       />
     </a>
     <div class="flex flex-col flex-1 ml-5 md:ml-0 mt-2">
