@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@layouts/baselayout';
+---
+
+<BaseLayout
+  title="Analytics Opt-out"
+  description="Opt out of privacy-friendly analytics."
+  post={false}
+>
+  <div class="container text-center">
+    <h1 class="text-5xl font-black dark:text-gray-100">ANALYTICS</h1>
+    <div class="text-2xl">
+      We collect <span class="font-semibold">privacy-friendly</span> usage statistics
+      with Plausible Analytics.
+    </div>
+    <div class="my-4 text-xl dark:text-gray-100">
+      Want to opt-out anyway? Click the button below to toggle your exclusion in
+      Morris Motel analytics.
+    </div>
+
+    <div class="mb-10">
+      <h3 class="text-3xl" id="plausible_loading">
+        Loading your exclusion state...
+      </h3>
+      <h3 class="text-3xl hidden" id="plausible_included">
+        You are currently <span
+          class="dark:text-green-400 text-green-600 font-bold"
+          >opted-in
+        </span> to privacy-friendly analytics.
+      </h3>
+      <h3 class="text-3xl hidden" id="plausible_excluded">
+        You are currently <span class="dark:text-red-400 text-red-600 font-bold"
+          >opted-out
+        </span> from privacy-friendly analytics.
+      </h3>
+    </div>
+    <a
+      class="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-lg font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+      id="plausible_button"
+      href="javascript:toggleExclusion()"
+      >Exclude my visits
+    </a>
+  </div>
+
+  <script>
+    window.addEventListener('load', function (e) {
+      var exclusionState = window.localStorage.plausible_ignore == 'true';
+
+      if (exclusionState) {
+        document.getElementById('plausible_loading').classList.add('hidden');
+        document
+          .getElementById('plausible_excluded')
+          .classList.remove('hidden');
+        document.getElementById('plausible_button').innerHTML =
+          'Include my visits';
+      } else {
+        document.getElementById('plausible_loading').classList.add('hidden');
+        document
+          .getElementById('plausible_excluded')
+          .classList.remove('hidden');
+        document.getElementById('plausible_button').innerHTML =
+          'Exclude my visits';
+      }
+    });
+
+    function toggleExclusion(e) {
+      var exclusionState = window.localStorage.plausible_ignore == 'true';
+
+      if (exclusionState) {
+        delete window.localStorage.plausible_ignore;
+        document.getElementById('plausible_loading').classList.add('hidden');
+        document.getElementById('plausible_excluded').classList.add('hidden');
+        document
+          .getElementById('plausible_included')
+          .classList.remove('hidden');
+        document.getElementById('plausible_button').innerHTML =
+          'Exclude my visits';
+      } else {
+        window.localStorage.plausible_ignore = 'true';
+        document.getElementById('plausible_loading').classList.add('hidden');
+        document.getElementById('plausible_included').classList.add('hidden');
+        document
+          .getElementById('plausible_excluded')
+          .classList.remove('hidden');
+        document.getElementById('plausible_button').innerHTML =
+          'Stop excluding my visits';
+      }
+    }
+  </script>
+</BaseLayout>
