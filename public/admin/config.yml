@@ -29,15 +29,16 @@ collections:
         }
       - { label: 'Image', name: 'img', widget: 'image' }
       - { label: 'Description', name: 'desc', widget: 'text' }
-      - {
-          label: 'Tags',
-          name: 'tags',
-          widget: 'list',
-          default:
-            ['general-piracy', 'licit-guides', 'servarr', 'music-piracy'],
-        }
+      - label: "Tags"
+          name: "tags"
+          widget: "select"
+          multiple: true
+          options:
+            - { label: "General Piracy", value: "general-piracy" }
+            - { label: "Licit Guides", value: "licit-guides" }
+            - { label: "Servarr", value: "servarr" }
+            - { label: "Music Piracy", value: "music-piracy" }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 # slug: activate-windows-free
 # author: 'Cain'
-
