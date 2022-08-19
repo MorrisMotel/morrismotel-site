@@ -9,7 +9,7 @@ collections:
     label: 'Blog' # Used in the UI
     folder: 'src/pages/posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template
+    slug: '{{fields.slug}}' # Filename template
     filter:
       field: draft
       value: false
@@ -44,7 +44,13 @@ collections:
               { label: 'Music Piracy', value: 'music-piracy' },
             ],
         }
+      - {
+          label: 'Slug',
+          name: 'slug',
+          widget: 'string',
+          pattern:
+            ['^[a-z-]+$', 'You may only use lowercase letters and hyphens.'],
+        }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-# slug: activate-windows-free
 # author: 'Cain'
