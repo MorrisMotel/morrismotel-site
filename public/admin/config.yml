@@ -26,6 +26,8 @@ collections:
           name: 'date',
           widget: 'datetime',
           time_format: 'false',
+          format: 'MM-DD-YYYY',
+          picker_utc: true,
         }
       - { label: 'Image', name: 'img', widget: 'image' }
       - { label: 'Description', name: 'desc', widget: 'text' }
