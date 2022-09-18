@@ -1,23 +1,21 @@
 ---
 import Page from "@layouts/page";
-const collected = ['Page URL', 'Referrer domain', 'Browser', 'Operating System', 'Device type', 'Region'];
+const collected = ['Page URL', 'UTM Codes', 'Referrer domain', 'Unique', 'User-agent', 'Window dimensions', 'Browser language', 'Browser time zone'];
 ---
 
 <Page title="Privacy Policy">
 	<h2 class="text-3xl mt-5 mb-1">Overview</h2>
 	<p>Like any good motel, here at Morris Motel, discretion is our middle name. We believe <strong>privacy is a fundamental human right</strong>.</p>
 	<p>All Morris Motel website code is <a href="https://github.com/MorrisMotel/morrismotel-site">open-source on GitHub</a>. We're also hosted using Cloudflare Pages, so any changes pushed to our site repository take immediate effect on production, as long as there aren't any build errors. As a result, all code present on the GitHub repository is <strong>exactly</strong> the code used in production.</p>
-	<p>We do not host advertisements. We do not use cookies. All external scripts added to our site are open source and have been vetted as privacy-friendly. We collect a few anonymized, privacy-friendly analytics. Comments are implemented using GitHub Discussions. Forms are made by hand and all data is sent directly to a private Discord channel.</p>
+	<p>We do not host advertisements. We do not use cookies. All external scripts added to our site have been vetted as privacy-friendly, and we do our best to only use open-source components. We collect a few anonymized, privacy-friendly analytics. Comments are implemented using GitHub Discussions. Forms are made by hand and all data is sent directly to a private Discord channel.</p>
 	<h2 class="text-3xl mt-5 mb-1">Analytics</h2>
-	<p>We use a lightweight, <a href="https://github.com/plausible/analytics">open-source</a>,
-		privacy-respecting analytics service called <a href="https://plausible.io/">Plausible Analytics</a>. It collects few data points and does not track you, use cookies, or the like. These data points are not personally identifiable. We store the following information:</p>
+	<p>We use a lightweight, privacy-respecting analytics service called <a href="https://www.simpleanalytics.com/">Simple Analytics</a>. It collects few data points and does not track you, use cookies, or the like. These data points are not personally identifiable. We store the following information:</p>
 	<ul>
 		{collected.map(item => <li class="my-0">{item}</li> )}
 	</ul>
-	<p>We use this information to gauge how people interact with the site, and to improve the site. As a reminder, <strong>visiting a website will always send your IP and User-Agent to the server</strong>; that is the nature of an HTTP request. Plausible creates a hash (a random string of numbers and letters) with this information, alongside the site domain and a daily salt, using a <strong>one-way cryptographic hash</strong> function. The IP address and User-Agent are not stored whatsoever, and even the anonymized hashes are permanently deleted after one day. This renders the original information impossible to retrieve. The only hypothetical way to reverse the hash is through brute force, which would take a nearly infinite amount of time -- and remember, the hash expires in a day.</p>
+	<p>We use this information to gauge the interest to certain articles in order to improve the site. The "uniqueness" of a page view is determined with the referrer. If the referring url is <strong>not</strong> morrismotel.com, then it is marked as unique. No hashes necessary.</p>
 	<p>Additionally, our analytics dashboard is 100% open to the public. Go to <a href="https://plausible.io/morrismotel.com">plausible.io/morrismotel.com</a> to check out our analytics.</p>
-	<p>To maintain the accuracy of our privacy-friendly data collection (without ending up on a "tracker" blacklist), we proxy all of the analytics through our own domain. This prevents the data from being sent directly to plausible.io, which in turn prevents your adblocker's default blocking list from excluding your visit from our analytics. Because let's be honest, a site of this subject is bound to have a lot of tech-savvy visitors, most of which will probably have an adblocker.</p>
-	<p>Despite this, if you would <strong>still</strong> like to opt-out of Morris Motel analytics, you may visit our <a href="/stats/optout">opt-out page</a>. This will add an "ignore" flag to your browser storage. Alternatively, you can add the analytics collection url (morrismotel.com/stats) to your browser blacklist using an extension such as uBlock Origin.</p>
+	<p>To maintain the accuracy of our privacy-friendly data collection (without ending up on a "tracker" blacklist), we proxy all of the analytics through our own domain. This prevents the data from being sent directly to the Simple Analytics domain, which in turn prevents your adblocker's default blacklist from excluding your visit from our analytics. Because let's be honest, a site of this subject is bound to have a lot of tech-savvy visitors, most of which will probably have an adblocker.</p>
 	<h2 class="text-3xl mt-5 mb-1">Comments</h2>
 	<p>We use an open-source comments system called <a href="https://giscus.app/">Giscus</a>, which utilizes GitHub Discussions. You can find Giscus' source code <a href="https://github.com/giscus/giscus">here</a>. This was the most cost-efficient and transparent way to implement comments.</p>
 	<h2 class="text-3xl mt-5 mb-1">Forms</h2>
