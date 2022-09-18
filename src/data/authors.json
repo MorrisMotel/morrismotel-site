@@ -1,9 +1,9 @@
 {
     "Cain": {
       "name": "Cain",
-      "image": "/authors/cain.jpeg",
-      "desc": "A web developer and cybersecurity analyst by day and piracy guide writer by night, Cain has been writing (and coding) for Morris Motel since its inception.",
-      "longdesc": "Hi, I'm Cain. I'm a web developer and cybersecurity analyst by day, and a piracy guide writer by night. I'm mostly known for being Morris Motel's developer, but I also write about a wide range of topics. You can contact me via email: cain@morrismotel.com"
+      "image": "/authors/cain.jpg",
+      "desc": "A web developer and cybersecurity analyst by day and piracy guide writer by night, has been writing (and coding) for Morris Motel since its inception.",
+      "longdesc": "Hi, I'm Cain. I'm a web developer and cybersecurity analyst by day, and a piracy guide writer by night. I'm mostly known for being Morris Motel's developer, but I also write about a wide range of topics."
     },
     "AnvilKilo": {
       "name": "AnvilKilo",

@@ -32,12 +32,12 @@ const desc = `Author page for ${author?.name}`;
         <img
       class="w-24 h-24 rounded-full ring ring-current"
       src={author.image}
-      alt={`${author.name}'s profile picture`}""
+      alt={`${author.name}'s profile picture`}
     />
-    <h1 class="text-4xl mt-2 leading-headline text-center">
+    <h1 class="text-4xl mt-2 leading-headline text-center mb-1">
       Posts by {author.name}
     </h1>
-    <p class="mx-3 md:max-w-lg mt-4 text-center leading-tight text-base">{author?.longdesc}</p>
+    <p class="mx-3 md:max-w-xl mt-4 text-center leading-tight text-base text-neutral-300 mb-3">{author?.longdesc}</p>
   </div>
   <div class="container md:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 gap-y-5 mt-10">
