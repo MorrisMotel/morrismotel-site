@@ -1,16 +1,14 @@
+---
+import Head from '@components/Head';
+---
+
 <html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
-    />
-    <title>404 Not Found</title>
+  <Head title="404 Not Found">
     <style>
       @font-face {
         font-family: FSEX300;
-        src: url('../../fonts/FSEX300.ttf') format('truetype'),
-          url('../../fonts/FSEX300.svg') format('svg');
+        src: url('public/fonts/FSEX300.ttf') format('truetype'),
+          url('public/fonts/FSEX300.svg') format('svg');
         font-style: normal;
         font-weight: 400;
       }
@@ -22,7 +20,7 @@
         location.href = '/';
       }
     </script>
-  </head>
+  </Head>
 
   <body
     style="font-family: FSEX300; background: #0000cd;"
@@ -31,8 +29,8 @@
   >
     <div class="mt-[10vh] max-w-[1000px]">
       <span class="bg-[#ccc] text-[#0000cd] text-5xl px-4 py-1"
-        >404 Not Found</span
-      >
+        >404 Not Found
+      </span>
 
       <p class="text-3xl mt-10">A wild 404-PAGE appeared!</p>
       <p class="text-2xl mt-10">
