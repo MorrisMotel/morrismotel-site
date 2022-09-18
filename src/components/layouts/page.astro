@@ -1,7 +1,8 @@
 ---
 import '../../style/tailwind.css';
 import BaseLayout from './baselayout.astro';
-const { title, desc, img } = Astro.props;
+const { title, desc, img } = Astro.props.frontmatter || Astro.props;
+import '/src/style/page.css';
 ---
 
 <BaseLayout title={title} description={desc} image={img} post={false}>
