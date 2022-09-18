@@ -1,0 +1,49 @@
+---
+layout: '@layouts/page'
+title: 'Privacy Policy'
+---
+
+## Overview
+
+Like any good motel, here at Morris Motel, discretion is our middle name. We believe **privacy is a fundamental human right**.
+
+All Morris Motel website code is [open-source](https://github.com/MorrisMotel/morrismotel-site) on GitHub. We're also hosted using Cloudflare Pages, so any changes pushed to our site repository take immediate effect on production, as long as there aren't any build errors. As a result, all code present on the GitHub repository is **exactly** the code used in production.
+
+**TL;DR:** We do not host advertisements. We do not use cookies. All external scripts added to our site have been vetted as privacy-friendly, and we do our best to only use open-source components. We collect a few anonymized, privacy-friendly analytics. Comments are implemented using GitHub Discussions. Forms are made by hand and all data is sent directly to a private Discord channel.
+
+## Analytics
+
+We use a lightweight, privacy-respecting analytics service called [Simple Analytics](https://www.simpleanalytics.com/). It collects few data points and does not track you, use cookies, or the like. These data points are not personally identifiable. We store the following information:
+
+export const collected = [
+  'Page URL',
+  'UTM Codes',
+  'Referrer domain',
+  'Unique',
+  'User-agent',
+  'Window dimensions',
+  'Browser language',
+  'Browser time zone',
+];
+
+<ul>
+  {collected.map((item) => (
+    <li class="my-0">{item}</li>
+  ))}
+</ul>
+
+We use this information to gauge the interest to certain articles in order to improve the site. The "uniqueness" of a page view is determined with the referrer. If the referring url is **not** morrismotel.com, then it is marked as unique. No hashes necessary.
+
+Additionally, our analytics dashboard is 100% open to the public. Go to [simpleanalytics.com/morrismotel.com](https://simpleanalytics.com/morrismotel.com) to check out our analytics. To maintain the accuracy of our privacy-friendly data collection (without ending up on a "tracker" blacklist), we proxy all of the analytics through our own domain. This prevents the data from being sent directly to the Simple Analytics domain, which in turn prevents your adblocker's default blacklist from excluding your visit from our analytics. Because let's be honest, a site of this subject is bound to have a lot of tech-savvy visitors, most of which will probably have an adblocker.
+
+## Comments
+
+We use an open-source comments system called [Giscus](https://giscus.app/), which utilizes GitHub Discussions. You can find Giscus' source code [here](https://github.com/giscus/giscus). This was the most cost-efficient and transparent way to implement comments.
+
+## Forms
+
+If you choose to fill out a form, to submit a DMCA request for example, the form contents are sent directly from your browser to our Discord channel via webhook. None of the data is stored anywhere, and this ensures that we can respond as soon as possible.
+
+## Contact
+
+We are always available if you have any questions about our privacy policy. If that's the case, feel free to send us an email at [mailto:contact@morrismotel.com](contact@morrismotel.com).
