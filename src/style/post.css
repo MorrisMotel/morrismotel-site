@@ -1,0 +1,19 @@
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  font-size: 1.875rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  font-weight: 400 !important;
+}
+
+section ol li p {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+section ol li {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}

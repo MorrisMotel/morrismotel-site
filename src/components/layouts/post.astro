@@ -7,6 +7,8 @@ import authorData from '../../data/authors.json';
 const post = Astro.props;
 const frontmatter = post.frontmatter;
 const author = authorData[frontmatter.author];
+
+import '/src/style/post.css';
 ---
 
 <BaseLayout
@@ -72,7 +74,7 @@ const author = authorData[frontmatter.author];
     <div
       class="w-fit sm:w-72 md:w-full flex flex-col items-center bg-neutral-200 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl"
     >
-    <img
+      <img
         class="object-cover w-min h-auto md:h-52 md:w-56 md:mr-1 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
         src={author.image}
         alt={`${author.name}'s profile image'`}
@@ -111,7 +113,7 @@ const author = authorData[frontmatter.author];
     data-reactions-enabled="0"
     data-emit-metadata="0"
     data-input-position="top"
-    data-theme="https://morrismotel.vercel.app/stylesheets/giscus.css"
+    data-theme="https://morrismotel.pages.dev/stylesheets/giscus.css"
     data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
