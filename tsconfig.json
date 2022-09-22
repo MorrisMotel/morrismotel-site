@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "ES2022",
-    "target": "es2022",
-    "types": ["vite/client"],
-    "baseUrl": ".",
+    "baseUrl": "/src",
     "paths": {
-      "@components/*": ["/src/components/*.astro"],
-      "@layouts/*": ["/src/components/layouts/*.astro"],
-      "@data/*": ["/src/data/*.ts"],
-      "@lib/*": ["/src/lib/*.js"]
+      "@components/*": ["components/*.astro"],
+      "@layouts/*": ["components/layouts/*.astro"],
+      "@util/*": ["components/utilities/*"],
+      "@data/*": ["data/*"],
+      "@lib/*": ["lib/*"]
     }
   }
 }

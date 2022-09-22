@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
+import { remarkReadingTime } from '/src/lib/remark-reading-time.mjs';
+
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
-import mdx from "@astrojs/mdx";
 
+import mdx from "@astrojs/mdx";
 import remarkGFM from "remark-gfm"
 import remarkSmartypants from "remark-smartypants"
 
