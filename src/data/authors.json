@@ -1,8 +1,9 @@
 {
     "Cain": {
       "name": "Cain",
+      "color": "red",
       "image": "/authors/cain.jpg",
-      "desc": "A web developer and cybersecurity analyst by day and piracy guide writer by night, has been writing (and coding) for Morris Motel since its inception.",
+      "desc": "Web developer and cybersecurity analyst by day, piracy guide writer by night.",
       "longdesc": "Hi, I'm Cain. I'm a web developer and cybersecurity analyst by day, and a piracy guide writer by night. I'm mostly known for being Morris Motel's developer, but I also write about a wide range of topics."
     },
     "AnvilKilo": {
@@ -12,8 +13,9 @@
     },
     "MrMeatBones": {
       "name": "MrMeatBones",
+      "color": "purple",
       "image": "/authors/mrmeatbones.png",
-      "desc": "The original owner of the DeezNuts sequel (Morris Motel), MrMeatBones has been writing guides primarily on Servarr setups."
+      "desc": "Original owner of the DeezNuts sequel, Morris Motel. Specializes in Servarr setups."
     },
     "EgoDeer": {
       "name": "EgoDeer",

@@ -2,7 +2,7 @@
 import BaseLayout from '@layouts/baselayout';
 import Article from '@components/article';
 import ListPost from '@components/listpost';
-import { getAllPosts } from 'src/lib/posts';
+import { getAllPosts } from '@lib/posts.js';
 const posts = await Promise.all(await getAllPosts());
 const sortedPosts = posts.sort(
   (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf(),
@@ -13,7 +13,7 @@ const latestPost = sortedPosts[0];
 
 <BaseLayout>
   <div
-    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-2"
+    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
     style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${latestPost.img}');
     background-repeat: no-repeat; background-position: center center; background-size: cover;`}
   >

@@ -3,6 +3,7 @@ import BaseLayout from './baselayout.astro';
 import RelatedArticles from '../relatedArticles.astro';
 import { dateFilter } from '../../lib/dateFilter.js';
 import authorData from '../../data/authors.json';
+import Highlight from '../utilities/highlight.astro';
 
 const post = Astro.props;
 const frontmatter = post.frontmatter;
@@ -64,33 +65,30 @@ import '/src/style/post.css';
     <div class="container">
       <article class="prose dark:prose-invert !max-w-full">
         <slot />
-        <hr class="my-10" />
       </article>
     </div>
-
-    <h2 class="text-3xl mb-4 font-medium leading-headline">
+    <hr class="my-10 border-neutral-600" />
+    <!-- <h2 class="text-3xl mb-4 font-medium leading-headline">
       About the author:
-    </h2>
+    </h2> -->
     <div
-      class="w-fit sm:w-72 md:w-full flex flex-col items-center bg-neutral-200 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl"
+      class="w-64 sm:w-72 md:w-full flex flex-col items-center bg-neutral-200 dark:bg-neutral-900 rounded-2xl md:flex-row md:max-w-xl mb-10"
     >
       <img
-        class="object-cover w-min h-auto md:h-52 md:w-56 md:mr-1 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
+        class="object-cover w-fit h-56 md:h-36 md:w-36 md:mr-1 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
         src={author.image}
         alt={`${author.name}'s profile image'`}
       />
       <div class="flex flex-col justify-between leading-normal">
         <h5
-          class="text-neutral-900 dark:text-neutral-100 text-3xl font-medium ml-4 mt-1"
+          class="text-neutral-900 dark:text-neutral-100 text-4xl font-medium ml-4 mt-1"
         >
-          <a
-            class="hover:text-blue-500 transition-colors duration-200"
-            href={`/author/${author.name}`}
-            >{author.name}
+          <a href={`/author/${author.name}`}
+            ><Highlight color={author.color}>{author.name}</Highlight>
           </a>
         </h5>
         <p
-          class="text-neutral-700 dark:text-neutral-200 text-sm md:text-base m-4 mt-1"
+          class="text-neutral-700 dark:text-neutral-200 text-sm md:text-md m-4 mt-0"
         >
           {author?.desc}
         </p>
@@ -99,9 +97,9 @@ import '/src/style/post.css';
   </section>
 
   <!-- A comments system powered by GitHub Discussions: https://giscus.app -->
-  <h2 class="text-3xl mb-4 font-medium leading-headline mt-10">
+  <!-- <h2 class="text-3xl mb-4 font-medium leading-headline mt-10">
     Leave a comment:
-  </h2>
+  </h2> -->
   <script
     src="https://giscus.app/client.js"
     data-repo="MorrisMotel/morrismotel-site"
