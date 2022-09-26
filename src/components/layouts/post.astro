@@ -4,6 +4,7 @@ import RelatedArticles from '../relatedArticles.astro';
 import { dateFilter } from '../../lib/dateFilter.js';
 import authorData from '../../data/authors.json';
 import Highlight from '../utilities/highlight.astro';
+import Hero from '@components/hero';
 
 const post = Astro.props;
 const frontmatter = post.frontmatter;
@@ -17,12 +18,7 @@ import '/src/style/post.css';
   description={frontmatter.desc}
   image={frontmatter.img}
 >
-  <div
-    class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
-    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${
-      frontmatter.img
-    }'); ${frontmatter.offset && `background-position: ${frontmatter.offset};`}`}
-  >
+  <Hero data={frontmatter}>
     <div class="items-center">
       <h1
         class="text-center mx-3 md:mx-0 text-4xl md:text-5xl font-medium uppercase leading-headline max-w-max"
@@ -61,7 +57,7 @@ import '/src/style/post.css';
         </li>)}
       </ul> -->
     </div>
-  </div>
+  </Hero>
 
   <section class="flex flex-col">
     <div class="container">

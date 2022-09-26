@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '@layouts/baselayout';
-import Article from '@components/article';
 import ListPost from '@components/listpost';
+import Article from '@components/article';
+import Hero from '@components/hero';
+
 import { getAllPosts } from '@lib/posts.js';
 const posts = await Promise.all(await getAllPosts());
 
@@ -18,11 +20,7 @@ const featuredPost = featuredSort[0];
 ---
 
 <BaseLayout>
-  <div
-    class="md:h-72 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
-    style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${featuredPost.img}');
-    background-repeat: no-repeat; background-position: center center; background-size: cover;`}
-  >
+  <Hero data={featuredPost}>
     <div class="text-center text-neutral-content mt-5 md:mt-0 -mb-2 md:mb-0">
       <h1
         class="mx-3 md:mx-0 mb-3 text-4xl font-bold uppercase leading-headline text-white"
@@ -41,7 +39,7 @@ const featuredPost = featuredSort[0];
         ><a href={`/posts/${featuredPost.slug}`}>Read</a>
       </button>
     </div>
-  </div>
+  </Hero>
   <div class="mb-10">
     <h2 class="text-3xl mb-2 font-medium">Latest Articles:</h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
