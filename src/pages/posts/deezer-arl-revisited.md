@@ -1,6 +1,7 @@
 ---
 layout: ../../components/layouts/post.astro
 title: 'Deezer ARL: Revisited'
+mobiletitle: 'Deezer ARL Revisited'
 slug: deezer-arl-revisited
 date: 2022-09-22
 author: Cain
