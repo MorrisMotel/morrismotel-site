@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: 'Deezer ARL: Revisited'
 slug: deezer-arl-revisited
-date: 2022-09-22
+date: 2022-02-22
 author: Cain
 desc: "The process for generating a Deezer ARL has changed a bit. We'll tell you how to generate one, but... should we still be using them?"
 img: '/images/deezer-arl-revisited/thumb.jpg'
@@ -10,6 +10,7 @@ imgWidth: 800
 imgHeight: 500
 tags:
   - music-piracy
+featured: true
 ---
 
 There have been tons of reports of people who were unable to generate a Deezer ARL by following the old methods. In this article, we'll show you how to correctly generate a Deezer ARL, with the highest success rate -- a couple things have changed from the original methods. We'll also tell you about some other ways to rip your music, and why you might want to switch.
@@ -27,14 +28,14 @@ Before we begin, please be sure that you're writing down all the account informa
 1. **VPN:** Enable your VPN, set to Germany. If you do not have a VPN yet, [Windscribe](https://windscribe.com/) offers a free plan with access to their Germany servers. We do not recommend using Windscribe for permanent use, but it'll do just fine if you don't have one yet. Read about our VPN recommendations [here](/posts/which-vpn-should-you-get).
 
 2. **CREATE AN ACCOUNT:** Go to Deezer's website, and sign up for a Premium account. On the sign up page, it should ask for an email, username, password, age, and gender. For the email address, use one that ends with `@gmail.com` or `@hotmail.com`. If you do not have a spare Google account to use, you can use [Tempmail](https://tempmail.dev/en/Gmail). If Tempmail doesn't load for you, [Emailnator](https://www.emailnator.com/) should also work. It hasn't asked for any verification in the past, so you may be able to make up a random email address. For the other required fields, you can find randomized information at [Outputter](https://outputter.io/full-identity/germany/). If Outputter doesn't load for you, [MyFakeInfo](https://www.myfakeinfo.com/identity/de-identity-info-generator.php) will work fine too. 
-![](/images/deezer-arl-revisited/generate-arl-1.png)
+![full size image of the account phase of arl generation](/images/deezer-arl-revisited/generate-arl-1.png)
 
 3. **PAYMENT:** It should then lead you to a payment page. If you've followed the previous directions, it should give you the option for Direct Debit. Select Direct Debit and fill in the information, again from Outputter. Confirm the Terms and Conditions, and begin your free trial. Enter the IBAN from Outputter (or alternatively, [RandomIBAN](http://randomiban.com/?country=Germany)). For the email address, use the same address you used previously. Hit Continue. 
-![](/images/deezer-arl-revisited/generate-arl-2.png)
+![full size image of the payment phase of arl generation](/images/deezer-arl-revisited/generate-arl-2.png)
 
 4. **VERIFICATION:** Change the country code on Deezer from +49 to +1, and go to [recieve-sms-free.cc](https://receive-sms-free.cc/Free-USA-Phone-Number/) for a temporary phone number. Click Send Code, and wait a minute or two for the text to be received by receive-sms-free, refreshing often. If the text hasn't come through after a few minutes, go back and try another phone number. You're looking for a text which says the following: `Code:XXXX. Allow (Deezer SA) to debit your account. One time password, expires in 15mn.`
 
-![](/images/deezer-arl-revisited/generate-arl-3.png)
+![full size image of the verification phase of arl generation](/images/deezer-arl-revisited/generate-arl-3.png)
 
 
 ## Grabbing the ARL

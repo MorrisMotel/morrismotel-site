@@ -62,3 +62,8 @@ code {
 p:has(a[href^="#"]) {
   margin: 0rem !important;
 }
+
+img[alt^="full size"] {
+  width: 100%;
+  max-width: none !important;
+}
