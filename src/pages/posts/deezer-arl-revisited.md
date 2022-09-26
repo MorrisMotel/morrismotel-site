@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: 'Deezer ARL: Revisited'
 slug: deezer-arl-revisited
-date: 2022-02-22
+date: 2022-09-22
 author: Cain
 desc: "The process for generating a Deezer ARL has changed a bit. We'll tell you how to generate one, but... should we still be using them?"
 img: '/images/deezer-arl-revisited/thumb.jpg'
