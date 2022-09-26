@@ -53,8 +53,8 @@ const latestPost = sortedPosts[0];
             >
               <h2 class="inline mr-4 font-bold">#{tag}</h2>
               <p class="inline text-sm">
-                {posts.filter((post) => post.tags.includes(tag)).length}{' '}
-                {posts.filter((post) => post.tags.includes(tag)).length < 2
+                {posts.filter((post) => post.tags.includes(tag)).length}
+                {posts.filter((post) => post.tags.includes(tag)).length <= 1
                   ? 'article'
                   : 'articles'}
               </p>

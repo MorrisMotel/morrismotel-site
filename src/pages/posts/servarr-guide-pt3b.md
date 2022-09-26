@@ -1,6 +1,6 @@
 ---
 layout: ../../components/layouts/post.astro
-title: 'Servarr Setup Pt. 3b: Prowlarr, Sonarr, and Radarr'
+title: 'Servarr Setup Pt. 3b: Automation'
 slug: servarr-guide-pt3b
 date: 2022-03-05
 author: MrMeatBones

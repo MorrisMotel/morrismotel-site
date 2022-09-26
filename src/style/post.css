@@ -1,19 +1,64 @@
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  text-transform: uppercase;
+  margin-bottom: 0.1em;
+  margin-top: 3rem;
+}
+
 .prose :where(h2):not(:where([class~="not-prose"] *)) {
   font-size: 1.875rem !important;
-  margin-top: 1.25rem !important;
+  margin-top: 2rem !important;
   margin-bottom: 0.25rem !important;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+}
+
+.prose :where(h4):not(:where([class~="not-prose"] *)) {
+  font-weight: 400 !important;
 }
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {
   font-weight: 400 !important;
 }
 
-section ol li p {
+/* section ol li p {
   margin-top: 0em !important;
   margin-bottom: 0em !important;
-}
+} */
 
 section ol li {
   margin-top: 0em !important;
   margin-bottom: 0em !important;
+}
+
+code {
+  font-variant-ligatures: none;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .prose :where(img):not(:where([class~="not-prose"] *)) {
+    max-width: 50% !important;
+  }
+}
+
+.prose :where(img):not(:where([class~="not-prose"] *)) {
+  border-radius: 10px;
+}
+
+/* remove the code backticks */
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+  content: none !important;
+}
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: none !important;
+}
+
+p:has(a[href^="#"]) {
+  margin: 0rem !important;
 }
