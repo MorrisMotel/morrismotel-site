@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '@layouts/baselayout';
-import ListPost from '@components/listpost';
-import Article from '@components/article';
-import Hero from '@components/hero';
+import ListPost from '@components/listpost.astro';
+import Article from '@components/article.astro';
+import Hero from '@components/hero.astro';
 
 import { getAllPosts } from '@lib/posts.js';
 const posts = await Promise.all(await getAllPosts());

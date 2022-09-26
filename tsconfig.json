@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "/src",
     "paths": {
-      "@components/*": ["components/*.astro"],
       "@layouts/*": ["components/layouts/*.astro"],
+      "@components/*": ["components/*"],
       "@util/*": ["components/utilities/*"],
       "@data/*": ["data/*"],
       "@lib/*": ["lib/*"]
