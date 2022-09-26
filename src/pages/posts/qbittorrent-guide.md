@@ -82,11 +82,9 @@ Now sometimes, the torrent will not initiate or download. This may be because it
 
 Sometimes, there will be some trackers that requires to seed a torrent before or after downloading one. qBitTorrent activates this function right after we finish the torrent, but what if we want to seed a file that we don't have in qBitTorrent?
 
-The zero step is having the downloaded files in our PC. Then, we need to find the torrent download file we want to seed. I will be seeding Night of the Living Dead. Now, we open the torrent file and we are going to look at the **root folder** (not the file folder). Notice that you will need all the same files and folder name. Otherwise, it won't recognize the torrent as downloaded.
+The zero step is having the downloaded files in our PC. Then, we need to find the torrent download file we want to seed. I will be seeding Night of the Living Dead. Now, we open the torrent file and we are going to look at the **root folder** (not the file folder). Notice that you will need all the same files and folder name. Otherwise, it won't recognize the torrent as downloaded. 
 
-![](/images/qbittorrent-guide/qBitTorrent-seed-1.png)
-
-And that's all. It will begin to check the files and re-download the damaged blocks if there's one. After the summary check, it will be appearing as "seeding".
+It will begin to check the files and re-download the damaged blocks if there's one. After the summary check, it will be appearing as "seeding".
 
 ![](/images/qbittorrent-guide/qBitTorrent-seed-2.png)
 
