@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Guide to qBitTorrent"
 slug: qbittorrent-guide
-date: 2022-02-22
+date: 2022/02/22
 author: EgoDeer
 desc: "qBitTorrent is one of the most popular torrent downloaders. But how do you use it properly?"
 img: "/images/qbittorrent-guide/thumb.png"

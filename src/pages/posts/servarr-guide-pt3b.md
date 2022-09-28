@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: 'Servarr Setup Pt. 3b: Automation'
 slug: servarr-guide-pt3b
-date: 2022-03-05
+date: 2022/03/05
 author: MrMeatBones
 desc: "Now that you've decided which indexers to use, Its time to start putting those decisions to use. In this section we're going to set up three programs; Sonarr, Radarr and Prowlarr."
 tags:

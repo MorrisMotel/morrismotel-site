@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: 'Activate Windows for Free'
 slug: activate-windows-free
-date: 2022-05-30
+date: 2022/05/30
 author: 'Cain'
 desc: "Microsoft Windows is probably the most popular desktop operating system out there. A license, however, can be quite pricey. Here's how to crack Windows 10/11/Server."
 img: '/images/activate-windows-free/thumb.jpg'

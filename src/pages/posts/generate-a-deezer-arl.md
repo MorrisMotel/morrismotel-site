@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: Generate a Deezer ARL
 slug: generate-a-deezer-arl
-date: 2022-02-21
+date: 2022/02/21
 author: Cain
 desc: "There are three methods to generate a Deezer Premium (or HiFi) account: the iBan method, the VCC method, and the BIN method. Let's go through them."
 img: '/images/generate-a-deezer-arl/thumb.jpg'

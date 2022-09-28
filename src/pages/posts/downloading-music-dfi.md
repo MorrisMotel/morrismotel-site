@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Downloading Music: D-fi"
 slug: downloading-music-dfi
-date: 2022-03-02
+date: 2022/03/02
 author: MrMeatBones
 desc: "D-fi is Deemix's CLI only cousin. They're both built from the ground up to download from Deezer's servers and ultimately serve the same purpose."
 img: "/images/downloading-music-dfi/thumb.png"

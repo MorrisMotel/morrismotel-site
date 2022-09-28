@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Create A Matrix Server"
 slug: create-a-matrix-server
-date: 2022-04-22
+date: 2022/04/22
 author: "Cain"
 desc: "Matrix is a decentralized and open source chat protocol, which encourages users to launch their own homeserver."
 img: "/images/create-a-matrix-server/thumb.png"

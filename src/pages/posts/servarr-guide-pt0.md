@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Servarr Setup Pt. 0: Choosing Your Software"
 slug: servarr-guide-pt0
-date: 2022-03-13
+date: 2022/03/13
 author: MrMeatBones
 desc: "So you're thinking of starting a media server, but you're not sure where to start. Truth is, there's half a dozen different ways to do it and they end up functionally the same."
 tags:

@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Servarr Setup Pt. 1: Plex"
 slug: servarr-guide-pt1
-date: 2022-02-21
+date: 2022/02/21
 author: MrMeatBones
 desc: "So you're ready to take the plunge and build an automated media server? Fantastic! By the end of this, you will have the following: a fully automated media search/download stack for movies, tv and music as well as the ability to stream it all from your home pc to any device you own using Plex."
 img: "/images/servarr-guide-pt1/thumb.jpg"

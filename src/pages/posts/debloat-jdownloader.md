@@ -3,7 +3,7 @@ layout: ../../components/layouts/post.astro
 title: 'De-bloat JDownloader2'
 mobiletitle: 'De-bloat JD2'
 slug: debloat-jdownloader
-date: 2022-03-04
+date: 2022/03/04
 author: Cain
 desc: "JDownloader2 is a very common method for DDLing from a variety of sites, especially Google Drive. However, it's quite bloated out of the box. So, how can you remove the bloat?"
 img: '/images/debloat-jdownloader/thumb.png'

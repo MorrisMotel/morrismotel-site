@@ -2,7 +2,7 @@
 layout: ../../components/layouts/post.astro
 title: "Guide to Usenet"
 slug: usenet-guide
-date: 2022-02-28
+date: 2022/02/28
 author: MrMeatBones
 desc: "In this guide we're going to explain how to set up Usenet. If you do not know what Usenet is, you can learn more about it here but for our purposes all you need to know is that its essentially a DDL, or direct download service."
 img: "/images/usenet-guide/thumb.jpg"
