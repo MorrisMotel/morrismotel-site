@@ -1,6 +1,6 @@
 ---
 layout: '../../components/layouts/post.astro'
-title: What VPN Should You Get?
+title: Which VPN Should You Get?
 slug: which-vpn-should-you-get
 date: '2022-02-28'
 author: Cain
@@ -42,10 +42,10 @@ Tesonet, a data mining company, also (supposedly) owns NordVPN and SurfShark.
 |                         | Country                | No-log Policy | Audited | Transparency Reports | Open Source     | Proved in Court |
 | ----------------------- | ---------------------- | ------------- | ------- | -------------------- | --------------- | --------------- |
 | NordVPN                 | Lithuania              | ✅            | ✅      | ❌                   | ❌              | ❌              |
-| ExpressVPN              | British Virgin Islands | ✅            | ✅      | ❌                   | Extensions [^1] | ✅ [^5]         |
-| Private Internet Access | United States          | ✅            | ✅      | ❌                   | Android [^2]    | ✅ [^6]         |
-| Mullvad                 | Sweden                 | ✅            | ✅      | ❌                   | ✅ [^3]         | ❌              |
-| Proton VPN              | Switzerland            | ✅            | ✅      | ✅                   | Apps [^4]       | ✅ [^7]         |
+| ExpressVPN              | British Virgin Islands | ✅            | ✅      | ❌                   | Extensions [^1] | ✅ [^2]         |
+| Private Internet Access | United States          | ✅            | ✅      | ❌                   | Android [^3]    | ✅ [^4]         |
+| Mullvad                 | Sweden                 | ✅            | ✅      | ❌                   | ✅ [^5]         | ❌              |
+| Proton VPN              | Switzerland            | ✅            | ✅      | ✅                   | Apps [^6]       | ✅ [^7]         |
 | IVPN                    | Gibraltar              | ✅            | ✅      | ✅                   | Apps            | ❌              |
 
 Note that smaller VPN providers' policies (such as Mullvad or IVPN), while they are trusted in the community, haven't had their policies proven in court simply because they are not used on the same scale as more popular providers like NordVPN or ExpressVPN.
@@ -103,9 +103,20 @@ Disclaimer: I reached out to IVPN for a press demo, and was provided with a 3-mo
 ## Sources
 
 [^1]: [expressvpn.com/blog/browser-extension-audit-and-open-sourcing/](https://www.expressvpn.com/blog/browser-extension-audit-and-open-sourcing/)
-[^2]: [privateinternetaccess.com/blog/the-private-internet-access-android-app-is-being-open-sourced/](https://www.privateinternetaccess.com/blog/the-private-internet-access-android-app-is-being-open-sourced/)
-[^3]: [protonvpn.com/blog/open-source/](https://protonvpn.com/blog/open-source/)
-[^4]: [mullvad.net/en/help/no-logging-data-policy/](https://mullvad.net/en/help/no-logging-data-policy/)
-[^5]: [expressvpn.com/blog/expressvpn-statement-andrey-karlov-investigation/](https://www.expressvpn.com/blog/expressvpn-statement-andrey-karlov-investigation/)
-[^6]: [scribd.com/doc/303226103/Fake-bomb-threat-arrest](https://www.scribd.com/doc/303226103/Fake-bomb-threat-arrest)
+[^2]: [expressvpn.com/blog/expressvpn-statement-andrey-karlov-investigation/](https://www.expressvpn.com/blog/expressvpn-statement-andrey-karlov-investigation/)
+[^3]: [privateinternetaccess.com/blog/the-private-internet-access-android-app-is-being-open-sourced/](https://www.privateinternetaccess.com/blog/the-private-internet-access-android-app-is-being-open-sourced/)
+[^4]: [scribd.com/doc/303226103/Fake-bomb-threat-arrest](https://www.scribd.com/doc/303226103/Fake-bomb-threat-arrest)
+[^5]: [mullvad.net/en/help/no-logging-data-policy/](https://mullvad.net/en/help/no-logging-data-policy/)
+[^6]: [protonvpn.com/blog/open-source/](https://protonvpn.com/blog/open-source/)
 [^7]: [protonvpn.com/blog/transparency-report/](https://protonvpn.com/blog/transparency-report/)
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
