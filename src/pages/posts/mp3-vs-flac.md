@@ -3,9 +3,9 @@ layout: ../../components/layouts/post.astro
 title: 'MP3 vs. FLAC'
 slug: mp3-vs-flac
 date: 2022/04/22
-author: Cain
+author: Anonymous
 desc: 'MPEG (The Moving Picture Experts Group) has developed compression systems used for video data. FLAC stands for Free Lossless Audio Codec.'
-img: '/images/mp3-vs-flac/thumb.jpg'
+img: '/assets/mp3-vs-flac/thumb.jpg'
 imgWidth: 800
 imgHeight: 500
 tags:

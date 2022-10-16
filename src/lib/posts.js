@@ -1,4 +1,4 @@
-export async function getAllPosts() {
+export async function getAllPosts(archived) {
   const fetchedPosts = import.meta.globEager('/src/pages/posts/**/*.md');
   const items = await Object.keys(fetchedPosts).map(async (key) => {
     const post = fetchedPosts[key];
@@ -6,5 +6,6 @@ export async function getAllPosts() {
     const item = { ...post.frontmatter, url };
     return item;
   });
-  return items;
+  if (archived) return items;
+  return items.filter((item) => !item.archived);
 }

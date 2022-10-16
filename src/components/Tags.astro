@@ -1,6 +1,6 @@
 ---
 import { getAllPosts } from '../lib/posts';
-const posts = await Promise.all(await getAllPosts());
+const posts = await Promise.all(await getAllPosts(false));
 const allTags = [...new Set(posts.flatMap(({ tags }) => tags))];
 ---
 

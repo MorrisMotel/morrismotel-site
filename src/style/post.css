@@ -23,12 +23,12 @@
   font-weight: 400 !important;
 }
 
-/* section ol li p {
+section ol li {
   margin-top: 0em !important;
   margin-bottom: 0em !important;
-} */
+}
 
-section ol li {
+section ol li p {
   margin-top: 0em !important;
   margin-bottom: 0em !important;
 }

@@ -5,7 +5,7 @@ slug: servarr-guide-pt1
 date: 2022/02/21
 author: MrMeatBones
 desc: "So you're ready to take the plunge and build an automated media server? Fantastic! By the end of this, you will have the following: a fully automated media search/download stack for movies, tv and music as well as the ability to stream it all from your home pc to any device you own using Plex."
-img: "/images/servarr-guide-pt1/thumb.jpg"
+img: "/assets/servarr-guide-pt1/thumb.jpg"
 tags:
   - servarr
 ---
@@ -32,7 +32,7 @@ With that out of the way, let’s begin!
 The first step is to create a Plex account then install Plex Media Server, and the player if you plan to watch content from the same machine. The Plex web player is not recommended, since you'll get much better quality from the desktop app.
 
 Click this link [here](https://www.plex.tv/media-server-downloads/#plex-media-server) and select the latest PMS build for Windows. Download and install that.
-![](/images/servarr-guide-pt1/image0.png)
+![](/assets/servarr-guide-pt1/image0.png)
 
 While that is downloading and installing, go to the top of the page and click sign up, then complete sign up.
 
@@ -40,43 +40,43 @@ If you are planning to watch content on the same machine you’re installing all
 
 Once PMS is installed, click Launch. It will open up a browser window. Sign in to your account and begin configuration. First, name your server, then make sure you check “Allow me to access my media outside my home”. Click Next. It'll think for a bit then bring you to this screen.
 
-![](/images/servarr-guide-pt1/image0-2.png)
+![](/assets/servarr-guide-pt1/image0-2.png)
 
 This is where you’re going to create your libraries. Click Add Library and select the media type you want. In this guide we’re adding TV, Music, and Movies so we’ll select TV first.
 
-![](/images/servarr-guide-pt1/image0-3.png)
+![](/assets/servarr-guide-pt1/image0-3.png)
 
 Name the library if you want then click next.
 
-![](/images/servarr-guide-pt1/image0-4.png)
+![](/assets/servarr-guide-pt1/image0-4.png)
 
 Now, open file explorer and create the actual folders where you’re going to store the media. Ours sit under D:\Plex but they can be wherever we want.
 
-![](/images/servarr-guide-pt1/image0-5.png)
+![](/assets/servarr-guide-pt1/image0-5.png)
 
 Next go back into your web browser and select “Browse For Media Folder”. Navigate to the correct folder and select it then select add folder.
 
-![](/images/servarr-guide-pt1/image0-6.png)
+![](/assets/servarr-guide-pt1/image0-6.png)
 
 Select “add” then select “add library”. Your screen will look like this.
 
-![](/images/servarr-guide-pt1/image0-7.png)
+![](/assets/servarr-guide-pt1/image0-7.png)
 
 Repeat the steps above for Movies and Music, making sure to select the correct media type and folder. At the end it should look like this. If it does, select next, then finish setup.
 
-![](/images/servarr-guide-pt1/image0-8.png)
+![](/assets/servarr-guide-pt1/image0-8.png)
 
 Click “Next” on the following pages until you reach a screen that looks like this.
 
-![](/images/servarr-guide-pt1/image0-9.png)
+![](/assets/servarr-guide-pt1/image0-9.png)
 
 The first thing you’ll notice is a bunch of content on the home page that isn’t yours. Plex has a bunch of ad-supported media, which (in my opinion) sucks. If you want to only show what you add to the server, simply click More > at the bottom of the sidebar then the pin icons underneath the Plex Categories to unpin them from your home page. While you're there, feel free to pin the libraries from your own servers.
 
-![](/images/servarr-guide-pt1/image0-10.png)
+![](/assets/servarr-guide-pt1/image0-10.png)
 
 Now your homepage will be empty with your folders on the left hand side.
 
-![](/images/servarr-guide-pt1/image0-11.png)
+![](/assets/servarr-guide-pt1/image0-11.png)
 
 Now that we have Plex Media Server installed and configured, let's move onto filling it with content.\
 Part 2 is coming soon. For a guide on Usenet, skip to [Part 3a](/posts/servarr-guide-pt3a). For an automation guide (*arrs), skip to [Part 3b](/posts/servarr-guide-pt3b).

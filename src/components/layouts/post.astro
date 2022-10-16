@@ -21,7 +21,7 @@ import '/src/style/post.css';
   <Hero data={frontmatter}>
     <div class="items-center">
       <h1
-        class="text-center mx-3 md:mx-0 text-4xl md:text-5xl font-medium uppercase leading-headline max-w-max"
+        class="text-center mx-3 md:mx-8 text-4xl md:text-5xl font-medium uppercase leading-headline max-w-max"
       >
         <span class="md:hidden block"
           >{frontmatter.mobiletitle
@@ -50,12 +50,18 @@ import '/src/style/post.css';
           >By {author.name}
         </a>
       </p>
-      <!-- <ul>
-        {frontmatter.tags.map((tag) =>
-        <li><a href={`/tags/${tag}`}
-            class='hover:text-blue-500 transition-colors duration-200 mx-2 text-sm font-medium'>#{tag}</a>
-        </li>)}
-      </ul> -->
+      <ul class="space-x-5 text-center mt-3">
+        {frontmatter.tags.map((tag) => (
+          <li class="inline">
+            <a
+              href={`/tags/${tag}`}
+              class="hover:text-blue-500 transition-colors duration-200 text-sm font-medium"
+            >
+              #{tag}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </Hero>
 
@@ -117,6 +123,7 @@ import '/src/style/post.css';
   >
 
   </script>
+  <noscript>Enable Javascript to load the comment section.</noscript>
 
   <div class="mt-12">
     <h2 class="text-3xl mb-2 font-medium leading-headline">

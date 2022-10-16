@@ -2,7 +2,7 @@
 import Article from './article.astro';
 import { getAllPosts } from '@lib/posts.js';
 const post = Astro.props.post;
-const posts = await Promise.all(await getAllPosts());
+const posts = await Promise.all(await getAllPosts(false));
 const filtered = posts.filter(
   (el) =>
     post.content.tags.some((x) => el.tags.includes(x)) &&

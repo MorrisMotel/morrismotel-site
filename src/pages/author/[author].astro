@@ -5,7 +5,7 @@ import authorData from '@data/authors.json';
 import { getAllPosts } from '@lib/posts.js';
 
 export async function getStaticPaths() {
-  const allPosts = await Promise.all(await getAllPosts());
+  const allPosts = await Promise.all(await getAllPosts(false));
   let allAuthorsUnique = [...new Set(allPosts.map((p) => p.author))];
   return allAuthorsUnique.map((author) => ({
     params: {
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const allPosts = await Promise.all(await getAllPosts());
+const allPosts = await Promise.all(await getAllPosts(false));
 const posts = allPosts
   .filter((post) => post.author === Astro.params.author)
   .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
@@ -25,6 +25,9 @@ const author = authorData[posts[0].author];
 
 const title = `Author - ${author?.name}`;
 const desc = `Author page for ${author?.name}`;
+
+import { Markdown } from '@astropub/md'
+
 ---
 
 <BaseLayout title={title} description={desc} image={author.image} post={false}>
@@ -37,7 +40,9 @@ const desc = `Author page for ${author?.name}`;
     <h1 class="text-4xl mt-3 leading-headline text-center mb-1">
       Posts by {author.name}
     </h1>
-    <p class="mx-3 md:max-w-xl mt-4 text-center leading-tight text-md dark:text-neutral-300 text-neutral-700 mb-3">{author?.longdesc}</p>
+    <p class="mx-3 md:max-w-xl mt-4 text-center leading-tight text-md dark:text-neutral-300 text-neutral-700 mb-3">
+      { author.longdesc && <Markdown.Inline of={author.longdesc} />}
+    </p>
   </div>
   <div class="container md:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-5 mt-10">

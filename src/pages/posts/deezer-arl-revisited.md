@@ -6,7 +6,7 @@ slug: deezer-arl-revisited
 date: 2022/09/22
 author: Cain
 desc: "The process for generating a Deezer ARL has changed a bit. We'll tell you how to generate one, but... should we still be using them?"
-img: '/images/deezer-arl-revisited/thumb.jpg'
+img: '/assets/deezer-arl-revisited/thumb.jpg'
 imgWidth: 800
 imgHeight: 500
 tags:
@@ -20,24 +20,23 @@ There have been tons of reports of people who were unable to generate a Deezer A
 
 As a refresher, the three methods used before were IBAN, BIN, and VCC. The **best** method to use is still VCC, as it works 100% of the time unless there's an issue with your provider. We officially do not recommend using the BIN method anymore, since the success rate is quite low (unless you find a reliable source), and it's way more sketchy than the previous methods. IBAN still works, but we've made some changes to the steps used to generate an ARL using IBAN in order to have a higher success rate.
 
-This is using the IBAN method. The ARL I generated while writing this guide will be available on the [Matrix server](https://matrix.to/#/#morrismotel:morrismotel.com), by the way -- alongside other community ARLs, and people who can help you generate your own. 
+## Generate an ARL
 
 Before we begin, please be sure that you're writing down all the account information, to ensure that you don't lose access by accident -- browsers have cleared caches/cookies before, resulting in lost accounts. We also recommend that you take note of the steps you do/don't take, and share them with us. Your community input on what works or doesn't work will help us improve our guides! If you use a password manager, creating an entry for your ARL works fantastic.
 
-## Generate an ARL
+This is using the IBAN method. If you're interested in the VCC method, you can find more information [further in the article](#virtual-credit-cards). The ARL I generated while writing this guide will be available on the [Matrix server](https://matrix.to/#/#morrismotel:morrismotel.com), by the way -- alongside other community ARLs, and people who can help you generate your own. Let's get started.
 
 1. **VPN:** Enable your VPN, set to Germany. If you do not have a VPN yet, [Windscribe](https://windscribe.com/) offers a free plan with access to their Germany servers. We do not recommend using Windscribe for permanent use, but it'll do just fine if you don't have one yet. Read about our VPN recommendations [here](/posts/which-vpn-should-you-get).
 
 2. **CREATE AN ACCOUNT:** Go to Deezer's website, and sign up for a Premium account. On the sign up page, it should ask for an email, username, password, age, and gender. For the email address, use one that ends with `@gmail.com` or `@hotmail.com`. If you do not have a spare Google account to use, you can use [Tempmail](https://tempmail.dev/en/Gmail). If Tempmail doesn't load for you, [Emailnator](https://www.emailnator.com/) should also work. It hasn't asked for any verification in the past, so you may be able to make up a random email address. For the other required fields, you can find randomized information at [Outputter](https://outputter.io/full-identity/germany/). If Outputter doesn't load for you, [MyFakeInfo](https://www.myfakeinfo.com/identity/de-identity-info-generator.php) will work fine too. 
-![full size image of the account phase of arl generation](/images/deezer-arl-revisited/generate-arl-1.png)
+![full size image of the account phase of arl generation](/assets/deezer-arl-revisited/generate-arl-1.png)
 
 3. **PAYMENT:** It should then lead you to a payment page. If you've followed the previous directions, it should give you the option for Direct Debit. Select Direct Debit and fill in the information, again from Outputter. Confirm the Terms and Conditions, and begin your free trial. Enter the IBAN from Outputter (or alternatively, [RandomIBAN](http://randomiban.com/?country=Germany)). For the email address, use the same address you used previously. Hit Continue. 
-![full size image of the payment phase of arl generation](/images/deezer-arl-revisited/generate-arl-2.png)
+![full size image of the payment phase of arl generation](/assets/deezer-arl-revisited/generate-arl-2.png)
 
 4. **VERIFICATION:** Change the country code on Deezer from +49 to +1, and go to [recieve-sms-free.cc](https://receive-sms-free.cc/Free-USA-Phone-Number/) for a temporary phone number. Click Send Code, and wait a minute or two for the text to be received by receive-sms-free, refreshing often. If the text hasn't come through after a few minutes, go back and try another phone number. You're looking for a text which says the following: `Code:XXXX. Allow (Deezer SA) to debit your account. One time password, expires in 15mn.`
 
-![full size image of the verification phase of arl generation](/images/deezer-arl-revisited/generate-arl-3.png)
-
+![full size image of the verification phase of arl generation](/assets/deezer-arl-revisited/generate-arl-3.png)
 
 ## Grabbing the ARL
 
@@ -51,7 +50,7 @@ On **Safari**, you'll need to go to preferences and enable "Show Develop menu in
 
 If the `arl` cookie doesn't appear, first ensure that you're logged in. Go through the account initiation process (select some random artists, etc). Reloading the page or logging out/back in may help. If it still won't show, try another browser. 
 
-![](/images/deezer-arl-revisited/grab-arl.png)
+![](/assets/deezer-arl-revisited/grab-arl.png)
 
 ## Using an ARL
 
@@ -89,9 +88,13 @@ I attempted to exploit both TIDAL and Qobuz with IBAN, but neither of these serv
 
 ### Virtual Credit Cards
 
-**If you can get ahold of a VCC, get one!** For those based in the United States, [Privacy.com](https://privacy.com/) is free for up to 12 cards/mo -- plenty for generating accounts. [Abine Blur](https://www.abine.com/) is another option, which probably offers more privacy than others (though paid), and [Revolut](https://www.revolut.com/revolut-shopper/) is a great option for those in the UK. Your credit card provider may also offer a similar service. The age minimum for these services vary, as do the documents (or lack thereof) required for verification to sign up. 
+To recap, the VCC method is taking advantage of a legitimate service offered by many credit card companies (and others), called Virtual Credit Cards. They allow you to use different card numbers for different websites, while charges to any of them will go to your one account. You can "burn" cards when you don't want to risk being charged by them anymore, or set charge limits so that they can't charge you more than you intended. 
 
-The process for generating accounts is 100x easier with a VCC, plus it's still fully anonymous to the streaming service, as you can use any address and name with the card.
+This is useful for us because we can create a "burner" card with a $1 maximum total charge limit. This way, when Deezer (or another service) attempts to check the validity of the card, it'll work fine. But when the trial ends and they try to charge the card, it will fail since the card won't allow a charge over $1. While I doubt a VCC provider would approve of exploiting free trials like we do, using VCCs for a free trial (generally speaking) is a totally legitimate practice. If you're committing serious financial crimes, definitely do not rely on a VCC to protect you -- but again, we're only exploiting free trials, so VCCs will work great for our use-case. 
+
+Therefore, **if you can get ahold of a VCC, get one!** For those based in the United States, [Privacy.com](https://privacy.com/) is free for up to 12 cards/mo -- plenty for generating accounts. [Abine Blur](https://www.abine.com/) is another option, which probably offers more privacy than others (though paid), and [Revolut](https://www.revolut.com/revolut-shopper/) is a great option for those in the UK. Your credit card provider may also offer a similar service, perhaps under a different name. The age minimum for these services vary, as do the documents (or lack thereof) required for verification to sign up, so I would recommend reading the requirements before attempting to sign up. 
+
+The process for generating accounts is 100x easier with a VCC, plus it's still fully anonymous to the streaming service, as you can use any address and name with the card. Using a VCC is just like signing up for any other free trial, except you're using the VCC's card number. You can use tempmail or outputter to get your email address or account information, but you don't have to.
 
 ### Slav Art
 

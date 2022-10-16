@@ -5,7 +5,7 @@ slug: downloading-music-streamrip
 date: 2022/02/22
 author: Cain
 desc: 'There are quite a few methods to rip music from streaming services. Streamrip is arguably the best one out there. It supports Qobuz, Deezer, TIDAL, Soundcloud, and YouTube.'
-img: '/images/downloading-music-streamrip/thumb.jpg'
+img: '/assets/downloading-music-streamrip/thumb.jpg'
 tags:
   - music-piracy
 ---

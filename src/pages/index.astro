@@ -5,12 +5,11 @@ import Article from '@components/article.astro';
 import Hero from '@components/hero.astro';
 
 import { getAllPosts } from '@lib/posts.js';
-const posts = await Promise.all(await getAllPosts());
 
+const posts = await Promise.all(await getAllPosts(false));
 const dateSorted = posts.sort(
   (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf(),
 );
-
 const featuredSort = dateSorted.sort(
   (a, b) => Number(b.featured || false) - Number(a.featured || false),
 );
@@ -32,7 +31,9 @@ const featuredPost = featuredSort[0];
       >
         {featuredPost.desc}
       </p>
-      <h5 class="mb-4 uppercase">Featured Article</h5>
+      <h5 class="mb-4 uppercase">
+        {featuredPost.featured ? 'Featured' : 'Latest'} Article
+      </h5>
       <button
         type="button"
         class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-3 py-2 mb-8 md:mb-0"
@@ -41,7 +42,9 @@ const featuredPost = featuredSort[0];
     </div>
   </Hero>
   <div class="mb-10">
-    <h2 class="text-3xl mb-2 font-medium">Latest Articles:</h2>
+    <h2 class="text-3xl mb-2 font-medium">
+      {featuredSort[1].featured ? 'Featured' : 'Latest'} Articles:
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
       {featuredSort.slice(1, 5).map((p) => <Article post={p} />)}
     </div>

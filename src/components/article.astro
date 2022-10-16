@@ -4,7 +4,7 @@ import { dateFilter } from '../lib/dateFilter.js';
 const post = Astro.props.post;
 const { slug, title, minutesRead } = post;
 const slugUrl = '/posts/' + slug;
-const imgUrl = post?.img ?? '/images/fallback.png';
+const imgUrl = post?.img ?? '/assets/fallback.png';
 const date = dateFilter(post?.date);
 ---
 
@@ -29,8 +29,10 @@ const date = dateFilter(post?.date);
         </h3>
       </a>
       <p class="md:flex md:flex-wrap items-center text-sm mt-1">
-        {date}<span class="hidden md:block ml-2 mr-1">·</span><span class="flex"
-          ><Icon class="w-4 md:ml-1 mr-1" name="academic-book" />
+        {date}<span class="hidden md:block ml-2 mr-1">·</span><span
+          class="flex"
+        >
+          <Icon name="heroicons-outline:book-open" class="w-4 md:ml-1 mr-1" />
           {minutesRead}
         </span>
       </p>

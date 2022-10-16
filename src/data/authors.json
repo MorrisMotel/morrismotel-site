@@ -2,9 +2,9 @@
     "Cain": {
       "name": "Cain",
       "color": "red",
-      "image": "/authors/cain.png",
+      "image": "/authors/cain.jpg",
       "desc": "Web developer and cybersecurity analyst by day, piracy guide writer by night.",
-      "longdesc": "Hi, I'm Cain. I'm a web developer and cybersecurity analyst by day, and a piracy guide writer by night. I'm mostly known for being Morris Motel's developer, but I also write about a wide range of topics."
+      "longdesc": "Hi, I'm Cain. I'm a web developer and cybersecurity analyst by day, and a piracy guide writer by night. I'm known for being Morris Motel's developer, but I also write sometimes. **Glory to God alone.**"
     },
     "AnvilKilo": {
       "name": "AnvilKilo",
@@ -21,6 +21,12 @@
       "name": "EgoDeer",
       "image": "/authors/egodeer.jpg",
       "desc": "Your friendly neighborhood EgoDeer."
+    },
+    "Anonymous": {
+      "name": "Anonymous",
+      "image": "/authors/anonymous.jpg",
+      "desc": "A mysterious figure.",
+      "longdesc": "The profile for those who wish to remain anonymous when contributing to Morris Motel."
     }
   }
   

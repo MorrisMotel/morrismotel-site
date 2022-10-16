@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif', ...defaultTheme.fontFamily.sans],
         mono: ['Space Mono', 'monospaced', ...defaultTheme.fontFamily.mono],
+        display: ['MADE Outer Sans', 'sans-serif', ...defaultTheme.fontFamily.sans]
       },
       lineHeight: {
         'headline': '0.85',

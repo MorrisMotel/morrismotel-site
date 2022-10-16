@@ -7,7 +7,7 @@ author: MrMeatBones
 desc: "So you're thinking of starting a media server, but you're not sure where to start. Truth is, there's half a dozen different ways to do it and they end up functionally the same."
 tags:
   - servarr
-img: "/images/servarr-guide-pt0/thumb.jpg"
+img: "/assets/servarr-guide-pt0/thumb.jpg"
 ---
 
 So you're thinking of starting a media server, but you're not sure where to start. Truth is, there's half a dozen different ways to do it and they end up functionally the same. From the streaming frontend to the operating system itself, we'll be going over some of the most popular choices and giving you a full how-to on each of them.

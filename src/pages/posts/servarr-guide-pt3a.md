@@ -7,7 +7,7 @@ author: MrMeatBones
 desc: "Now that we have Plex or Jellyfin set up for us to view content, Lets go ahead and start getting some content to watch! This part of the guide will cover setting up our indexers, which Sonarr and Radarr will use to find content for us."
 tags:
   - servarr
-img: "/images/servarr-guide-pt3a/thumb.jpg"
+img: "/assets/servarr-guide-pt3a/thumb.jpg"
 ---
 
 Now that we have Plex or Jellyfin set up for us to view content, Lets go ahead and start getting some content to watch! Before we download anything, we have another decision to make: which downloader type we're going to use. The most common answer for most people will be torrents, but there is also the option to use Usenet. We'll go over the pros and cons of both briefly.

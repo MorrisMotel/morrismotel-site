@@ -15,7 +15,7 @@ Seems like everyone these days wants a VPN — whether it’s for circumventing 
 
 First, despite what your favorite YouTuber might say, **a VPN is not a magic button to protect you from all internet threats**. It only reroutes your internet traffic through a server — which means you still have to trust your traffic going through said server, otherwise using a VPN will be futile. It also won't protect you from cyberattacks or data breaches, hide your financial transactions or your geographical location, prevent social media profiling or your computer being hacked, or most other vulnerabilities. Military-grade encryption means nothing, and the contents of the sites you visit are probably already encrypted with HTTP over TLS/SSL.
 
-![](/images/which-vpn-should-you-get/https-screenshot.png)
+![](/assets/which-vpn-should-you-get/https-screenshot.png)
 
 Second, **there is no such thing as a good free unlimited VPN**. There is always a catch. Some VPN providers might offer a free trial or half a gig of data, etc, but any VPN that offers unlimited traffic without any limitations is stealing your data and selling it online... or worse. Free VPNs have been caught injecting malware (web tracking), replacing advertisements with their own, and not actually encrypting traffic, despite their claims. Proton VPN's free plan is one of very few exceptions -- it provides access to 100-ish servers in three countries, moderate bandwidth, one simultaneous conection, but no P2P/Torrent support.
 

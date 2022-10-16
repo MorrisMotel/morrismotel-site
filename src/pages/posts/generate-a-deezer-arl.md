@@ -4,21 +4,22 @@ title: Generate a Deezer ARL
 slug: generate-a-deezer-arl
 date: 2022/02/21
 author: Cain
-desc: "There are three methods to generate a Deezer Premium (or HiFi) account: the iBan method, the VCC method, and the BIN method. Let's go through them."
-img: '/images/generate-a-deezer-arl/thumb.jpg'
+desc: "There are three methods to generate a Deezer Premium (or HiFi) account: the IBAN method, the VCC method, and the BIN method. Let's go through them."
+img: '/assets/generate-a-deezer-arl/thumb.jpg'
 imgWidth: 800
 imgHeight: 500
 tags:
   - music-piracy
+archived: true
 ---
 
-Heads up: this article is somewhat **out of date**. For an updated version, please see [The Deezer ARL Revisited](/posts/deezer-arl-revisited).
+##### ⚠️ THIS ARTICLE IS **OUT OF DATE**. [CLICK HERE FOR AN UPDATED VERSION](/posts/deezer-arl-revisited).
 
 ---
 
-There are three methods to generate a Deezer Premium (or HiFi) account: the iBan method, the VCC method, and the BIN method. Let's go through them.
+There are three methods to generate a Deezer Premium (or HiFi) account: the IBAN method, the VCC method, and the BIN method. Let's go through them.
 
-## iBan Method
+## IBAN Method
 
 This method works about 50% of the time. It'll work eventually, but it may take some trial and error. **If you don't have a bank account to make a VCC with, this is the method I recommend.**
 

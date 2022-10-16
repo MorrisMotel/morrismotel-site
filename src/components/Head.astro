@@ -9,7 +9,7 @@ const content = Astro.props;
 
 let title = content.title ? content.title : siteInfo.siteName;
 let desc = content.description ? content.description : siteInfo.siteDesc;
-let img = content.image ? content.image : '/images/logo.png';
+let img = content.image ? content.image : '/assets/logo.png';
 ---
 
 <head>
@@ -70,14 +70,14 @@ let img = content.image ? content.image : '/images/logo.png';
     media="(prefers-color-scheme: light)"
   />
 
-  <script async defer src="https://api.morrismotel.com/latest.js"></script>
-  <noscript>
-    <img 
-      src="https://api.morrismotel.com/noscript.gif" 
-      alt="" 
-      referrerpolicy="no-referrer-when-downgrade"
-    />
-  </noscript>
-  
-  <slot />
-</head>
+  <script async defer src="https://api.morrismotel.com/latest.js">
+
+  </script>
+  <noscript> </noscript>
+</head><img
+  src="https://api.morrismotel.com/noscript.gif"
+  alt=""
+  referrerpolicy="no-referrer-when-downgrade"
+/>
+
+<slot />
