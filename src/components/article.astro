@@ -6,6 +6,7 @@ const { slug, title, minutesRead } = post;
 const slugUrl = '/posts/' + slug;
 const imgUrl = post?.img ?? '/assets/fallback.png';
 const date = dateFilter(post?.date);
+import { Image, Picture } from '@astrojs/image/components';
 ---
 
 <article class="group flex justify-between group md:flex-col-reverse">
@@ -14,8 +15,11 @@ const date = dateFilter(post?.date);
       href={slugUrl}
       class="flex-none w-24 h-24 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1"
     >
-      <img
+      <Image
         class="object-cover md:w-80 md:h-48 w-24 h-24 transition-opacity duration-300 rounded-xl drop-shadow group-hover:opacity-70"
+        format="webp"
+        height="500"
+        aspectRatio="3/5"
         alt={title}
         src={imgUrl}
       />

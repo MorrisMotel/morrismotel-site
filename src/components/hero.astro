@@ -1,11 +1,13 @@
 ---
+import { getImage } from '@astrojs/image';
 const { data } = Astro.props;
+const { src } = await getImage({ src: data.img, alt: data.title, height: 600, width: 1000, format: "webp" });
 ---
 
   <div
     class="h-80 rounded-2xl mb-10 text-white flex relative w-full bg-cover bg-center justify-center items-center dark:border-white dark:border-4"
     style={`background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${
-      data.img
+      src
     }'); ${data.offset && `background-position: ${data.offset};`}`}
   >
   <slot />
